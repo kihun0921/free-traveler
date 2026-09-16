@@ -1,0 +1,107 @@
+{
+  "schema": "traveler-screen-route-v1",
+  "generatedFrom": [
+    "docs/04_UIUX_PLAN.md",
+    "design-reference/D-001/DESIGN.md",
+    "docs/STITCH_VALIDATION_REPORT.md"
+  ],
+  "screens": [
+    {
+      "id": "SCR-001",
+      "route": "/",
+      "title": "메인",
+      "filePath": "src/app/page.tsx",
+      "mobileVariant": true,
+      "tabs": [],
+      "roles": [],
+      "drawers": ["destination-detail", "safety-detail"],
+      "sections": [
+        { "id": "SCR-001-S1", "order": 1, "title": "여행지 검색 Hero", "pattern": "HERO", "minContent": 1, "emptyStateRequired": false },
+        { "id": "SCR-001-S2", "order": 2, "title": "국내 인기 여행지", "pattern": "CARD_GRID", "minContent": 6, "emptyStateRequired": true },
+        { "id": "SCR-001-S3", "order": 3, "title": "해외 인기 여행지", "pattern": "CARD_GRID", "minContent": 6, "emptyStateRequired": true },
+        { "id": "SCR-001-S4", "order": 4, "title": "여행 동기·테마", "pattern": "CHIP_LIST", "minContent": 6, "emptyStateRequired": false },
+        { "id": "SCR-001-S5", "order": 5, "title": "국가별 주의사항", "pattern": "CARD_GRID", "minContent": 6, "emptyStateRequired": true },
+        { "id": "SCR-001-S6", "order": 6, "title": "최근 동행글", "pattern": "CARD_GRID", "minContent": 3, "emptyStateRequired": true },
+        { "id": "SCR-001-S7", "order": 7, "title": "free_traveler 소개", "pattern": "SPLIT", "minContent": 1, "emptyStateRequired": false }
+      ]
+    },
+    {
+      "id": "SCR-002",
+      "route": "/about",
+      "title": "대표 소개",
+      "filePath": "src/app/about/page.tsx",
+      "mobileVariant": false,
+      "tabs": [],
+      "roles": [],
+      "drawers": [],
+      "sections": [
+        { "id": "SCR-002-S1", "order": 1, "title": "free_traveler Hero", "pattern": "HERO", "minContent": 1, "emptyStateRequired": false },
+        { "id": "SCR-002-S2", "order": 2, "title": "여행 지표", "pattern": "CARD_GRID", "minContent": 2, "emptyStateRequired": false },
+        { "id": "SCR-002-S3", "order": 3, "title": "소개·철학", "pattern": "SPLIT", "minContent": 3, "emptyStateRequired": false },
+        { "id": "SCR-002-S4", "order": 4, "title": "여행 Timeline", "pattern": "TIMELINE", "minContent": 6, "emptyStateRequired": false },
+        { "id": "SCR-002-S5", "order": 5, "title": "방문 국가", "pattern": "CHIP_LIST", "minContent": 30, "emptyStateRequired": false },
+        { "id": "SCR-002-S6", "order": 6, "title": "여행 사진 Gallery", "pattern": "CARD_GRID", "minContent": 8, "emptyStateRequired": false },
+        { "id": "SCR-002-S7", "order": 7, "title": "기억에 남는 여행지", "pattern": "CARD_GRID_CTA", "minContent": 4, "emptyStateRequired": false }
+      ]
+    },
+    {
+      "id": "SCR-003",
+      "route": "/travel-tools",
+      "title": "통합 여행 준비",
+      "filePath": "src/app/travel-tools/page.tsx",
+      "mobileVariant": true,
+      "tabs": ["flight", "hotel", "mate"],
+      "roles": [],
+      "drawers": [],
+      "sections": [
+        { "id": "SCR-003-S1", "order": 1, "title": "Intro", "pattern": "THREE_STEP", "minContent": 3, "emptyStateRequired": false, "tabs": ["flight", "hotel", "mate"] },
+        { "id": "SCR-003-S2", "order": 2, "title": "탭 전환", "pattern": "TAB_BAR", "minContent": 3, "emptyStateRequired": false, "tabs": ["flight", "hotel", "mate"] },
+        { "id": "SCR-003-S3", "order": 3, "title": "조건 입력 Form", "pattern": "FORM", "minContent": 4, "emptyStateRequired": false, "tabs": ["flight", "hotel"] },
+        { "id": "SCR-003-S4", "order": 4, "title": "입력 요약 + 외부 이동", "pattern": "ACTION_CARD", "minContent": 1, "emptyStateRequired": false, "tabs": ["flight", "hotel"] },
+        { "id": "SCR-003-S5", "order": 5, "title": "비전달 고지 + Tip", "pattern": "THREE_STEP", "minContent": 3, "emptyStateRequired": false, "tabs": ["flight", "hotel"] },
+        { "id": "SCR-003-S6", "order": 6, "title": "동행 구하기", "pattern": "FORM", "minContent": 1, "emptyStateRequired": true, "tabs": ["mate"] }
+      ]
+    },
+    {
+      "id": "SCR-004",
+      "route": "/mates",
+      "title": "동행 조회",
+      "filePath": "src/app/mates/page.tsx",
+      "mobileVariant": false,
+      "tabs": [],
+      "roles": [],
+      "drawers": ["mate-detail"],
+      "sections": [
+        { "id": "SCR-004-S1", "order": 1, "title": "Intro", "pattern": "CTA_BANNER", "minContent": 1, "emptyStateRequired": false },
+        { "id": "SCR-004-S2", "order": 2, "title": "Filter + 결과 요약", "pattern": "FILTER_BAR", "minContent": 1, "emptyStateRequired": false },
+        { "id": "SCR-004-S3", "order": 3, "title": "동행글 목록", "pattern": "CARD_GRID", "minContent": 8, "emptyStateRequired": true },
+        { "id": "SCR-004-S4", "order": 4, "title": "목록+상세 분할", "pattern": "SPLIT_DETAIL", "minContent": 1, "emptyStateRequired": false },
+        { "id": "SCR-004-S5", "order": 5, "title": "신청 방법 3단계", "pattern": "THREE_STEP", "minContent": 3, "emptyStateRequired": false },
+        { "id": "SCR-004-S6", "order": 6, "title": "안전 안내 + CTA", "pattern": "CTA_BANNER", "minContent": 1, "emptyStateRequired": false }
+      ]
+    },
+    {
+      "id": "SCR-005",
+      "route": "/account",
+      "title": "계정·관리",
+      "filePath": "src/app/account/page.tsx",
+      "mobileVariant": false,
+      "tabs": ["login", "profile", "activity", "admin"],
+      "roles": ["GUEST", "MEMBER", "ADMIN"],
+      "drawers": [],
+      "sections": [
+        { "id": "SCR-005-S1", "order": 1, "title": "로그인", "pattern": "FORM", "minContent": 3, "emptyStateRequired": false, "roles": ["GUEST"] },
+        { "id": "SCR-005-S2", "order": 2, "title": "프로필", "pattern": "CARD_GRID", "minContent": 1, "emptyStateRequired": false, "roles": ["MEMBER", "ADMIN"] },
+        { "id": "SCR-005-S3", "order": 3, "title": "내 활동", "pattern": "CARD_GRID", "minContent": 1, "emptyStateRequired": true, "roles": ["MEMBER", "ADMIN"] },
+        { "id": "SCR-005-S4", "order": 4, "title": "간단 관리자", "pattern": "FORM", "minContent": 2, "emptyStateRequired": true, "roles": ["ADMIN"] }
+      ]
+    }
+  ],
+  "techRoutes": [
+    "/auth/callback",
+    "/api/**",
+    "/404",
+    "/500",
+    "/unauthorized"
+  ]
+}
