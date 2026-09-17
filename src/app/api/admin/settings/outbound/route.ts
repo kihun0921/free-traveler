@@ -23,12 +23,12 @@ export async function GET() {
   try {
     const supabase = await createClient();
 
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("app_setting")
       .select("key,value")
       .in("key", ["flight_outbound_url", "hotel_outbound_url"]);
 
-    if (!data) {
+    if (!data || error) {
       return NextResponse.json(
         { error: "Failed to fetch settings" },
         { status: 500 },
@@ -44,7 +44,7 @@ export async function GET() {
       flight_outbound_url: settings.flight_outbound_url || "",
       hotel_outbound_url: settings.hotel_outbound_url || "",
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 },
@@ -78,42 +78,49 @@ export async function POST(request: Request) {
     const supabase = await createClient();
 
     // Update each setting
-    const updates: Array<Promise<{ error?: unknown }>> = [];
+    const updates: Array<Promise<void>> = [];
 
     if (body.flight_outbound_url) {
       updates.push(
-        supabase.from("app_setting").upsert(
-          {
-            key: "flight_outbound_url",
-            value: body.flight_outbound_url,
-          },
-          { onConflict: "key" },
-        ),
+        (async () => {
+          const { error } = await supabase.from("app_setting").upsert(
+            {
+              key: "flight_outbound_url",
+              value: body.flight_outbound_url,
+            },
+            { onConflict: "key" },
+          );
+          if (error) {
+            throw error;
+          }
+        })(),
       );
     }
 
     if (body.hotel_outbound_url) {
       updates.push(
-        supabase.from("app_setting").upsert(
-          {
-            key: "hotel_outbound_url",
-            value: body.hotel_outbound_url,
-          },
-          { onConflict: "key" },
-        ),
+        (async () => {
+          const { error } = await supabase.from("app_setting").upsert(
+            {
+              key: "hotel_outbound_url",
+              value: body.hotel_outbound_url,
+            },
+            { onConflict: "key" },
+          );
+          if (error) {
+            throw error;
+          }
+        })(),
       );
     }
 
-    const results = await Promise.all(updates);
-
-    // Check for errors
-    for (const result of results) {
-      if (result.error) {
-        return NextResponse.json(
-          { error: "Failed to update settings" },
-          { status: 500 },
-        );
-      }
+    try {
+      await Promise.all(updates);
+    } catch {
+      return NextResponse.json(
+        { error: "Failed to update settings" },
+        { status: 500 },
+      );
     }
 
     return NextResponse.json({ success: true });

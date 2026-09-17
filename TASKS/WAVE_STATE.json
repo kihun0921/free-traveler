@@ -73,7 +73,7 @@
         "DB-RLS-BASE": "done",
         "DB-ACCESS": "done",
         "API-ADMIN-SETTINGS": "done",
-        "AUTH-SUPABASE-SETUP": "pending",
+        "AUTH-SUPABASE-SETUP": "done",
         "API-MATE-POSTS": "pending",
         "DB-SEED-BASE": "pending",
         "SEC-BASELINE": "pending"

@@ -1,4 +1,3 @@
-// @ts-expect-error - @supabase/ssr will be installed in AUTH-SUPABASE-SETUP
 import { createBrowserClient } from "@supabase/ssr";
 
 /**

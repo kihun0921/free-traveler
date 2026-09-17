@@ -1,4 +1,3 @@
-// @ts-expect-error - @supabase/ssr will be installed in AUTH-SUPABASE-SETUP
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
@@ -60,7 +59,6 @@ export async function createAdminClient() {
   }
 
   // Dynamic import to avoid loading in client context
-  // @ts-expect-error - module installed in AUTH-SUPABASE-SETUP
   const { createClient: createSupabaseClient } =
     await import("@supabase/supabase-js");
 

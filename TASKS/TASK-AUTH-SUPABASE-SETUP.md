@@ -11,7 +11,7 @@ page_entry: `/auth/callback`
 priority: P0
 depends_on: [DB-ACCESS]
 requirements: [REQ-FUNC-027, REQ-FUNC-028, REQ-FUNC-066]
-status: TODO
+status: DONE
 ---
 
 # AUTH-SUPABASE-SETUP — Supabase Auth 연동
