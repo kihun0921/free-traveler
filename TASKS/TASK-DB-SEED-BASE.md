@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [DB-SCHEMA-BASE]
 requirements: []
-status: TODO
+status: DONE
 ---
 
 # DB-SEED-BASE — 로컬/QA용 Seed 데이터

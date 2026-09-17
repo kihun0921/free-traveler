@@ -75,7 +75,7 @@
         "API-ADMIN-SETTINGS": "done",
         "AUTH-SUPABASE-SETUP": "done",
         "API-MATE-POSTS": "done",
-        "DB-SEED-BASE": "pending",
+        "DB-SEED-BASE": "done",
         "SEC-BASELINE": "pending"
       },
       "blockedTaskId": null,
