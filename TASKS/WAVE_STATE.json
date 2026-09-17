@@ -125,7 +125,7 @@
       "checkpoint_result": null,
       "taskStatuses": {
         "COMP-SCR001-SAFETY-DRAWER": "done",
-        "COMP-SCR001-DEST-DRAWER": "pending",
+        "COMP-SCR001-DEST-DRAWER": "done",
         "COMP-SCR001-DOMESTIC-GRID": "pending",
         "COMP-SCR001-OVERSEAS-GRID": "pending",
         "COMP-SCR001-SAFETY-GRID": "pending",

@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-DESTINATIONS, COMP-SCR001-SAFETY-DRAWER]
 requirements: [REQ-FUNC-004, REQ-FUNC-006, REQ-FUNC-007, REQ-FUNC-009]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR001-DEST-DRAWER — 여행지 상세 Drawer/Modal
