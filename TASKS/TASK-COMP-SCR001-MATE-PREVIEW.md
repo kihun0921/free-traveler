@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-MATE-POSTS]
 requirements: []
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR001-MATE-PREVIEW — 최근 동행글 3개/Empty(Section6)
