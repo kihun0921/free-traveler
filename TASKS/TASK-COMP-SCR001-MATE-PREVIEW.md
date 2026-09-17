@@ -2,7 +2,7 @@
 schema: traveler-screen-route-v1
 task_id: COMP-SCR001-MATE-PREVIEW
 seq: 11
-title: 최근 동행글 3개/Empty(Section6)
+title: 최근 ?�행글 3�?Empty(Section6)
 category: COMPONENT
 implementation_status: IMPLEMENT
 screen: SCR-001
@@ -14,36 +14,36 @@ requirements: []
 status: DONE
 ---
 
-# COMP-SCR001-MATE-PREVIEW — 최근 동행글 3개/Empty(Section6)
+# COMP-SCR001-MATE-PREVIEW ??최근 ?�행글 3�?Empty(Section6)
 
 ## Context
 
 - Category: **COMPONENT** / Implementation Status: **IMPLEMENT** / Priority: **P0**
-- 이 Task는 `TASKS/00_TASK_LIST.md`(Seq 11)에서 파생되었으며, 라우트 매핑은 `docs/06_SRS_UIUX_REVISED.md` §2를 따른다.
+- ??Task??`TASKS/00_TASK_LIST.md`(Seq 11)?�서 ?�생?�었?�며, ?�우??매핑?� `docs/06_SRS_UIUX_REVISED.md` §2�??�른??
 - Verify 방법: Manual Check
 
 ## Project Scope
 
-이 Task는 특정 REQ-FUNC/REQ-NF ID가 아니라 `design-reference/SCREEN_ROUTE_CONTRACT.json`의 Section 계약을 충족하기 위한 Task이다(Requirement Ref: Section 계약 전용).
+??Task???�정 REQ-FUNC/REQ-NF ID가 ?�니??`design-reference/SCREEN_ROUTE_CONTRACT.json`??Section 계약??충족?�기 ?�한 Task?�다(Requirement Ref: Section 계약 ?�용).
 
 ## Requirement Ref
 
--(Section 계약 전용)
+-(Section 계약 ?�용)
 
 ## Screen / Route / Page Entry
 
-| 항목 | 값 |
+| ??�� | �?|
 |---|---|
 | Screen | SCR-001 |
 | Route | `/` |
-| Page Entry | -(Page Entry 없음 — 화면 조립 Task 아님) |
+| Page Entry | -(Page Entry ?�음 ???�면 조립 Task ?�님) |
 
 ## Design Ref
 
-- `design-reference/D-001/DESIGN.md` — 디자인 토큰, Do/Do Not, Section 계층·리듬 규칙(Status: LOCKED)
-- `design-reference/UI_CONTRACT.md` — Screen별 Section 순서·최소 콘텐츠·Empty State 요구
-- `design-reference/SCREEN_ROUTE_CONTRACT.json` — Screen/Route/Section 정본(schema `traveler-screen-route-v1`)
-- 해당 Screen: `SCR-001` — `UI_CONTRACT.md`의 `SCR-001` 표를 그대로 인용해 AC를 검증한다.
+- `design-reference/D-001/DESIGN.md` ???�자???�큰, Do/Do Not, Section 계층·리듬 규칙(Status: LOCKED)
+- `design-reference/UI_CONTRACT.md` ??Screen�?Section ?�서·최소 콘텐츠·Empty State ?�구
+- `design-reference/SCREEN_ROUTE_CONTRACT.json` ??Screen/Route/Section ?�본(schema `traveler-screen-route-v1`)
+- ?�당 Screen: `SCR-001` ??`UI_CONTRACT.md`??`SCR-001` ?��? 그�?�??�용??AC�?검증한??
 
 ## Depends On
 
@@ -51,27 +51,27 @@ status: DONE
 
 ## Expected Files
 
-- `src/components/destinations/MatePreview.tsx`(신규)
+- `src/components/destinations/MatePreview.tsx`(?�규)
 
-> **이 목록 밖의 파일은 수정하지 않는다.** 추가 파일이 필요하면 `TASKS/00_TASK_LIST.md`를 먼저 갱신한 뒤 이 문서를 다시 생성한다.
+> **??목록 밖의 ?�일?� ?�정?��? ?�는??** 추�? ?�일???�요?�면 `TASKS/00_TASK_LIST.md`�?먼�? 갱신??????문서�??�시 ?�성?�다.
 
 ## Functional AC
 
-- [ ] 모집중 글만 최신 3개 노출
-- [ ] 0건이면 완성형 Empty State(설명+3단계 미니 안내+작성 CTA) 표시
+- [ ] 모집�?글�?최신 3�??�출
+- [ ] 0건이�??�성??Empty State(?�명+3?�계 미니 ?�내+?�성 CTA) ?�시
 
 ## Visual AC
 
-- [ ] Card Grid 3열/Mobile 1열
-- [ ] Lorem ipsum·준비 중 금지
+- [ ] Card Grid 3??Mobile 1??
+- [ ] Lorem ipsum·준�?�?금�?
 
 ## Security/Privacy AC
 
-- [ ] 연락처 미노출(목록 카드)
+- [ ] ?�락�?미노�?목록 카드)
 
 ## Test Cases
 
-- [ ] Manual Check: 로컬/프리뷰 배포에서 Functional/Visual AC를 사람이 직접 확인하고 스크린샷 또는 체크리스트로 기록
+- [ ] Manual Check: 로컬/?�리�?배포?�서 Functional/Visual AC�??�람??직접 ?�인?�고 ?�크린샷 ?�는 체크리스?�로 기록
 
 ## Verify
 
@@ -79,16 +79,16 @@ Manual Check
 
 ## Definition of Done
 
-- [ ] Functional AC, Visual AC, Security/Privacy AC 항목 전부 충족
-- [ ] Expected Files 목록에 명시된 파일만 생성/수정됨(그 외 파일 변경 없음)
-- [ ] Test Cases에 명시된 방법으로 확인 완료(Unit/E2E는 통과, Manual/Release Check는 체크리스트 기록)
-- [ ] `design-reference/D-001/DESIGN.md`의 Do/Do Not 위반 없음(Lorem ipsum·준비 중·정보 확인 필요·빈 Card·예약/결제 UI·별점/매너온도 없음)
-- [ ] `python scripts/audit_tasks.py` 재실행 시 이 Task와 관련된 FAIL 항목 없음
+- [ ] Functional AC, Visual AC, Security/Privacy AC ??�� ?��? 충족
+- [ ] Expected Files 목록??명시???�일�??�성/?�정??�????�일 변�??�음)
+- [ ] Test Cases??명시??방법?�로 ?�인 ?�료(Unit/E2E???�과, Manual/Release Check??체크리스??기록)
+- [ ] `design-reference/D-001/DESIGN.md`??Do/Do Not ?�반 ?�음(Lorem ipsum·준�?중·정�??�인 ?�요·�?Card·?�약/결제 UI·별점/매너?�도 ?�음)
+- [ ] `python scripts/audit_tasks.py` ?�실??????Task?� 관?�된 FAIL ??�� ?�음
 
 ## Forbidden
 
-- EC2·AWS 등 미승인 인프라 사용/언급
-- 예약·결제·체크아웃 UI, 가격(₩/$) 표기
-- 별점·리뷰·수치형 신뢰도 배지(예: 매너온도)
-- Expected Files 목록 밖 파일 생성·수정
-- 자동 Merge/Merge Runner 구성
+- EC2·AWS ??미승???�프???�용/?�급
+- ?�약·결제·체크?�웃 UI, 가�???$) ?�기
+- 별점·리뷰·?�치???�뢰??배�?(?? 매너?�도)
+- Expected Files 목록 �??�일 ?�성·?�정
+- ?�동 Merge/Merge Runner 구성
