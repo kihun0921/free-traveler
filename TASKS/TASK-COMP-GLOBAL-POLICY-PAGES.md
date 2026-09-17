@@ -11,7 +11,7 @@ page_entry: `src/app/policies/terms/page.tsx` 등
 priority: P1
 depends_on: []
 requirements: [REQ-FUNC-080]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-POLICY-PAGES — 이용약관·개인정보·안전수칙·면책

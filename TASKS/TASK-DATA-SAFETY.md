@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-DESTINATIONS]
 requirements: [REQ-FUNC-046, REQ-FUNC-047, REQ-FUNC-048, REQ-FUNC-052, REQ-FUNC-053, REQ-NF-027]
-status: TODO
+status: DONE
 ---
 
 # DATA-SAFETY — 국가 안전정보 정적 데이터

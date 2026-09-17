@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DB-SCHEMA-BASE]
 requirements: [REQ-FUNC-044, REQ-NF-013]
-status: TODO
+status: DONE
 ---
 
 # DB-RLS-BASE — RLS 정책

@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: []
 requirements: [REQ-FUNC-064, REQ-FUNC-065]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-HEADER-FOOTER — 전역 Header/Footer

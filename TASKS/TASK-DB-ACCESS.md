@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DB-SCHEMA-BASE, DB-RLS-BASE]
 requirements: []
-status: TODO
+status: DONE
 ---
 
 # DB-ACCESS — Supabase Access Layer

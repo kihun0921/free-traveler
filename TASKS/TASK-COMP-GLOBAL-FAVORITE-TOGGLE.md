@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: []
 requirements: [REQ-FUNC-068]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-FAVORITE-TOGGLE — 즐겨찾기 토글(localStorage)

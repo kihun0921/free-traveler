@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: []
 requirements: [REQ-FUNC-007, REQ-FUNC-008, REQ-NF-006, REQ-NF-026]
-status: TODO
+status: DONE
 ---
 
 # DATA-DESTINATIONS — 여행지 정적 데이터

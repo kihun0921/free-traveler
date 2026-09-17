@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: []
 requirements: [REQ-FUNC-043]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-TOAST — 전역 Toast 알림

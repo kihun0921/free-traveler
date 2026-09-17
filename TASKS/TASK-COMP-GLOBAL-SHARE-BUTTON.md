@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: []
 requirements: [REQ-FUNC-069]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-SHARE-BUTTON — 공유 버튼

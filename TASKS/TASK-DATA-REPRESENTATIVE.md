@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-DESTINATIONS]
 requirements: [REQ-FUNC-057, REQ-FUNC-058, REQ-FUNC-059, REQ-FUNC-060, REQ-FUNC-061, REQ-FUNC-063]
-status: TODO
+status: DONE
 ---
 
 # DATA-REPRESENTATIVE — 대표 소개 정적 데이터

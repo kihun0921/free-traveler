@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [DATA-DESTINATIONS, DATA-SAFETY]
 requirements: [REQ-FUNC-008, REQ-FUNC-046, REQ-FUNC-074, REQ-NF-026, REQ-NF-027]
-status: TODO
+status: DONE
 ---
 
 # DATA-CONTENT-VALIDATION — 콘텐츠 완전성 검증 스크립트

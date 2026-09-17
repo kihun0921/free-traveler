@@ -11,7 +11,7 @@ page_entry: `src/app/not-found.tsx`, `src/app/error.tsx`
 priority: P1
 depends_on: []
 requirements: [REQ-FUNC-078]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-ERROR-PAGES — 404/500/권한없음/외부연결실패

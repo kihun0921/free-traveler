@@ -14,21 +14,22 @@
         "COMP-GLOBAL-TOAST",
         "DATA-DESTINATIONS"
       ],
-      "status": "blocked",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "taskStatuses": {
-        "COMP-GLOBAL-ERROR-PAGES": "blocked",
-        "COMP-GLOBAL-FAVORITE-TOGGLE": "pending",
-        "COMP-GLOBAL-HEADER-FOOTER": "pending",
-        "COMP-GLOBAL-POLICY-PAGES": "pending",
-        "COMP-GLOBAL-SHARE-BUTTON": "pending",
-        "COMP-GLOBAL-TOAST": "pending",
-        "DATA-DESTINATIONS": "pending"
+        "COMP-GLOBAL-ERROR-PAGES": "done",
+        "COMP-GLOBAL-FAVORITE-TOGGLE": "done",
+        "COMP-GLOBAL-HEADER-FOOTER": "done",
+        "COMP-GLOBAL-POLICY-PAGES": "done",
+        "COMP-GLOBAL-SHARE-BUTTON": "done",
+        "COMP-GLOBAL-TOAST": "done",
+        "DATA-DESTINATIONS": "done"
       },
-      "blockedTaskId": "COMP-GLOBAL-ERROR-PAGES",
-      "blockedReason": "BLOCKED_DIRTY_TREE: git status --porcelain에 이 Task의 Expected Files(src/app/not-found.tsx, src/app/error.tsx, src/app/unauthorized/page.tsx)와 무관한 미커밋 변경 7건(수정)+5건(신규)이 있음 — .claude/commands/release-check.md, .claude/commands/run-wave.md, .gitignore, TASKS/WAVE_STATE.json, next.config.ts, package-lock.json, package.json, .github/, playwright.config.ts, scripts/check_screen_contract.py, tests/, vitest.config.ts",
-      "startedAt": "2026-09-17T00:00:00+00:00"
+      "blockedTaskId": null,
+      "blockedReason": null,
+      "startedAt": "2026-09-17T00:00:00+00:00",
+      "completedAt": "2026-09-17T00:10:00+00:00"
     },
     {
       "wave_id": "W02",
@@ -39,9 +40,19 @@
         "DATA-CONTENT-VALIDATION",
         "DB-SCHEMA-BASE"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
-      "checkpoint_result": null
+      "checkpoint_result": null,
+      "taskStatuses": {
+        "DATA-REPRESENTATIVE": "done",
+        "DATA-SAFETY": "done",
+        "DATA-CONTENT-VALIDATION": "done",
+        "DB-SCHEMA-BASE": "done"
+      },
+      "blockedTaskId": null,
+      "blockedReason": null,
+      "startedAt": "2026-09-17T11:35:00+00:00",
+      "completedAt": "2026-09-17T12:00:00+00:00"
     },
     {
       "wave_id": "W03",
@@ -55,9 +66,22 @@
         "DB-SEED-BASE",
         "SEC-BASELINE"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "checkpoint_required": false,
-      "checkpoint_result": null
+      "checkpoint_result": null,
+      "taskStatuses": {
+        "DB-RLS-BASE": "done",
+        "DB-ACCESS": "done",
+        "API-ADMIN-SETTINGS": "pending",
+        "AUTH-SUPABASE-SETUP": "pending",
+        "API-MATE-POSTS": "pending",
+        "DB-SEED-BASE": "pending",
+        "SEC-BASELINE": "pending"
+      },
+      "blockedTaskId": null,
+      "blockedReason": null,
+      "startedAt": "2026-09-17T12:01:00+00:00",
+      "completedAt": null
     },
     {
       "wave_id": "W04",

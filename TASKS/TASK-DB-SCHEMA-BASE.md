@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: []
 requirements: [REQ-FUNC-028, REQ-FUNC-029, REQ-FUNC-031, REQ-FUNC-034, REQ-FUNC-035, REQ-FUNC-036, REQ-FUNC-037, REQ-FUNC-038, REQ-FUNC-039, REQ-FUNC-040, REQ-FUNC-041, REQ-FUNC-077]
-status: TODO
+status: DONE
 ---
 
 # DB-SCHEMA-BASE — DB 스키마(6테이블 한도)
