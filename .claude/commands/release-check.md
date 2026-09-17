@@ -41,7 +41,7 @@ description: 배포 전 최종 게이트. Task/Wave 상태, Page Owner 완료, C
 
 ## 6. Vercel Preview Checkpoint
 
-- `TASKS/WAVE_STATE.json`에서 `WAITING_FOR_PREVIEW`로 남아 있는 Wave가 있는지 확인한다. 하나라도 남아 있으면(즉, 사람이 아직 Preview를 확인하지 않은 Wave가 있으면) **실패**로 기록한다.
+- `TASKS/WAVE_STATE.json`에서 Preview 대기 중인 Wave가 있는지 확인한다(`checkpoint_required: true`이면서 `checkpoint_result`가 아직 없는 Wave — `/run-wave`가 `WAITING_FOR_PREVIEW`로 보고하는 것과 같은 조건). 하나라도 있으면(즉, 사람이 아직 Preview를 확인하지 않은 Wave가 있으면) **실패**로 기록한다.
 - `TASK-RELEASE-VERCEL-SUPABASE-CHECK.md`의 frontmatter `status`가 `DONE`인지 확인한다.
 - `.vercel/` 디렉터리 또는 Vercel 프로젝트 연결 흔적이 저장소에 있는지 Glob으로 확인한다(연결 자체가 안 되어 있으면 Preview URL이 존재할 수 없으므로 실패로 기록).
 

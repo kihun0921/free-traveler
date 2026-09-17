@@ -1,6 +1,6 @@
 {
   "schema_version": "traveler-wave-state-v1",
-  "generated_at": "2026-09-16T12:39:28+00:00",
+  "generated_at": "2026-09-17T11:28:49+00:00",
   "waves": [
     {
       "wave_id": "W01",
@@ -14,9 +14,21 @@
         "COMP-GLOBAL-TOAST",
         "DATA-DESTINATIONS"
       ],
-      "status": "pending",
+      "status": "blocked",
       "checkpoint_required": false,
-      "checkpoint_result": null
+      "checkpoint_result": null,
+      "taskStatuses": {
+        "COMP-GLOBAL-ERROR-PAGES": "blocked",
+        "COMP-GLOBAL-FAVORITE-TOGGLE": "pending",
+        "COMP-GLOBAL-HEADER-FOOTER": "pending",
+        "COMP-GLOBAL-POLICY-PAGES": "pending",
+        "COMP-GLOBAL-SHARE-BUTTON": "pending",
+        "COMP-GLOBAL-TOAST": "pending",
+        "DATA-DESTINATIONS": "pending"
+      },
+      "blockedTaskId": "COMP-GLOBAL-ERROR-PAGES",
+      "blockedReason": "BLOCKED_DIRTY_TREE: git status --porcelain에 이 Task의 Expected Files(src/app/not-found.tsx, src/app/error.tsx, src/app/unauthorized/page.tsx)와 무관한 미커밋 변경 7건(수정)+5건(신규)이 있음 — .claude/commands/release-check.md, .claude/commands/run-wave.md, .gitignore, TASKS/WAVE_STATE.json, next.config.ts, package-lock.json, package.json, .github/, playwright.config.ts, scripts/check_screen_contract.py, tests/, vitest.config.ts",
+      "startedAt": "2026-09-17T00:00:00+00:00"
     },
     {
       "wave_id": "W02",
