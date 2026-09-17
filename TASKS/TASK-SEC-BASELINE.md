@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DB-ACCESS]
 requirements: [REQ-NF-014, REQ-NF-015, REQ-NF-016]
-status: TODO
+status: DONE
 ---
 
 # SEC-BASELINE — CSRF/XSS/환경변수 베이스라인
