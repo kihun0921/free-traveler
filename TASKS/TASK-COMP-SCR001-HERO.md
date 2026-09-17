@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-DESTINATIONS]
 requirements: [REQ-FUNC-002, REQ-FUNC-003, REQ-FUNC-005, REQ-FUNC-010, REQ-FUNC-067, REQ-NF-004]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR001-HERO — 여행지 검색 Hero(Section1)

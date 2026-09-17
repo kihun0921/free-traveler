@@ -98,7 +98,7 @@
       "checkpoint_result": null,
       "taskStatuses": {
         "COMP-SCR001-ABOUT-TEASER": "done",
-        "COMP-SCR001-HERO": "pending",
+        "COMP-SCR001-HERO": "done",
         "COMP-SCR001-MATE-PREVIEW": "pending",
         "TEST-RLS-BASIC": "pending"
       },
