@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DB-RLS-BASE]
 requirements: [REQ-FUNC-044, REQ-NF-013]
-status: TODO
+status: DONE
 ---
 
 # TEST-RLS-BASIC — RLS 기본 정책 Test
