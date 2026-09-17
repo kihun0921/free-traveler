@@ -74,7 +74,7 @@
         "DB-ACCESS": "done",
         "API-ADMIN-SETTINGS": "done",
         "AUTH-SUPABASE-SETUP": "done",
-        "API-MATE-POSTS": "pending",
+        "API-MATE-POSTS": "done",
         "DB-SEED-BASE": "pending",
         "SEC-BASELINE": "pending"
       },

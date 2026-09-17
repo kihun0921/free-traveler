@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DB-ACCESS, AUTH-SUPABASE-SETUP]
 requirements: [REQ-FUNC-031, REQ-FUNC-037, REQ-FUNC-038, REQ-NF-005]
-status: TODO
+status: DONE
 ---
 
 # API-MATE-POSTS — 동행글 CRUD API
