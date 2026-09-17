@@ -93,9 +93,19 @@
         "COMP-SCR001-MATE-PREVIEW",
         "TEST-RLS-BASIC"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "checkpoint_required": false,
-      "checkpoint_result": null
+      "checkpoint_result": null,
+      "taskStatuses": {
+        "COMP-SCR001-ABOUT-TEASER": "done",
+        "COMP-SCR001-HERO": "pending",
+        "COMP-SCR001-MATE-PREVIEW": "pending",
+        "TEST-RLS-BASIC": "pending"
+      },
+      "blockedTaskId": null,
+      "blockedReason": null,
+      "startedAt": "2026-09-17T14:30:00+00:00",
+      "completedAt": null
     },
     {
       "wave_id": "W05",

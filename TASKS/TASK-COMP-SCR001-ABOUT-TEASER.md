@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-057]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR001-ABOUT-TEASER — free_traveler 소개 Split(Section7)
