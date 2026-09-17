@@ -72,7 +72,7 @@
       "taskStatuses": {
         "DB-RLS-BASE": "done",
         "DB-ACCESS": "done",
-        "API-ADMIN-SETTINGS": "pending",
+        "API-ADMIN-SETTINGS": "done",
         "AUTH-SUPABASE-SETUP": "pending",
         "API-MATE-POSTS": "pending",
         "DB-SEED-BASE": "pending",

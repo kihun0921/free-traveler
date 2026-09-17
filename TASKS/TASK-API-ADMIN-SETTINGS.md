@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DB-ACCESS]
 requirements: [REQ-FUNC-077]
-status: TODO
+status: DONE
 ---
 
 # API-ADMIN-SETTINGS — 외부 URL 설정 API
