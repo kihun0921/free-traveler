@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-SAFETY]
 requirements: [REQ-FUNC-047, REQ-FUNC-048, REQ-FUNC-049, REQ-FUNC-050, REQ-FUNC-051, REQ-FUNC-052, REQ-FUNC-053, REQ-FUNC-054, REQ-NF-028]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR001-SAFETY-DRAWER — 안전정보 Drawer
