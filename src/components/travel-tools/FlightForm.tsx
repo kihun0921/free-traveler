@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SAFETY_INFO } from "@/data/safety";
-import { validateOutboundUrl, redirectToOutbound } from "@/lib/outbound";
+import { redirectToOutbound } from "@/lib/outbound";
 
 const COUNTRIES = [
   { code: "KR", name: "대한민국", regions: ["서울", "부산", "인천"] },
@@ -67,10 +66,7 @@ export function FlightForm() {
 
   const handleFlightsClick = () => {
     try {
-      const safetyInfo = SAFETY_INFO.find(
-        (s) => s.countryCode === state.country.toUpperCase()
-      );
-      const flightsUrl = safetyInfo?.ministry_link || "https://www.skyscanner.co.kr/";
+      const flightsUrl = "https://www.skyscanner.co.kr/";
       redirectToOutbound(flightsUrl);
     } catch (error) {
       setState((prev) => ({
@@ -146,10 +142,11 @@ export function FlightForm() {
   return (
     <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-6">
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="flight-country" className="block text-sm font-medium text-gray-900 mb-2">
           출발 국가
         </label>
         <select
+          id="flight-country"
           value={state.country}
           onChange={(e) =>
             setState((prev) => ({
@@ -158,6 +155,8 @@ export function FlightForm() {
               region: "",
             }))
           }
+          aria-invalid={!!state.errors.country}
+          aria-describedby={state.errors.country ? "flight-country-error" : undefined}
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.country
               ? "border-red-500 focus:ring-red-500"
@@ -172,16 +171,17 @@ export function FlightForm() {
           ))}
         </select>
         {state.errors.country && (
-          <p className="mt-1 text-sm text-red-600">{state.errors.country}</p>
+          <p id="flight-country-error" className="mt-1 text-sm text-red-600">{state.errors.country}</p>
         )}
       </div>
 
       {state.country && availableRegions.length > 0 && (
         <div>
-          <label className="block text-sm font-medium text-gray-900 mb-2">
+          <label htmlFor="flight-region" className="block text-sm font-medium text-gray-900 mb-2">
             지역
           </label>
           <select
+            id="flight-region"
             value={state.region}
             onChange={(e) =>
               setState((prev) => ({ ...prev, region: e.target.value }))
@@ -199,15 +199,18 @@ export function FlightForm() {
       )}
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="flight-depart" className="block text-sm font-medium text-gray-900 mb-2">
           출발일
         </label>
         <input
+          id="flight-depart"
           type="date"
           value={state.departDate}
           onChange={(e) =>
             setState((prev) => ({ ...prev, departDate: e.target.value }))
           }
+          aria-invalid={!!state.errors.departDate}
+          aria-describedby={state.errors.departDate ? "flight-depart-error" : undefined}
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.departDate
               ? "border-red-500 focus:ring-red-500"
@@ -215,22 +218,25 @@ export function FlightForm() {
           }`}
         />
         {state.errors.departDate && (
-          <p className="mt-1 text-sm text-red-600">
+          <p id="flight-depart-error" className="mt-1 text-sm text-red-600">
             {state.errors.departDate}
           </p>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="flight-return" className="block text-sm font-medium text-gray-900 mb-2">
           귀국일
         </label>
         <input
+          id="flight-return"
           type="date"
           value={state.returnDate}
           onChange={(e) =>
             setState((prev) => ({ ...prev, returnDate: e.target.value }))
           }
+          aria-invalid={!!state.errors.returnDate}
+          aria-describedby={state.errors.returnDate ? "flight-return-error" : undefined}
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.returnDate
               ? "border-red-500 focus:ring-red-500"

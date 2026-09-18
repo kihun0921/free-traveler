@@ -15,7 +15,7 @@ export function validateOutboundUrl(url: string): boolean {
     const hostname = parsedUrl.hostname;
 
     const allowlist = ADMIN_SETTINGS.outbound_url_allowlist || [];
-    const isAllowed = allowlist.some((domain) => {
+    const isAllowed = allowlist.some((domain: string) => {
       if (domain === hostname) return true;
       if (domain.startsWith("*.")) {
         const wildcard = domain.substring(2);
@@ -45,8 +45,7 @@ export function redirectToOutbound(url: string, destination?: string): void {
   redirectUrl.searchParams.delete("date");
   redirectUrl.searchParams.delete("start_date");
   redirectUrl.searchParams.delete("end_date");
-
-  delete (redirectUrl as any).password;
+  redirectUrl.password = "";
 
   window.location.href = redirectUrl.toString();
 }

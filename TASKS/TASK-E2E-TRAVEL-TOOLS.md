@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [PAGE-SCR003]
 requirements: [REQ-FUNC-011, REQ-FUNC-016, REQ-FUNC-019, REQ-FUNC-024]
-status: TODO
+status: DONE
 ---
 
 # E2E-TRAVEL-TOOLS — 여행 준비 흐름 Smoke(Chromium)

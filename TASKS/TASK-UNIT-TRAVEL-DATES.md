@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [COMP-SCR003-FLIGHT-FORM, COMP-SCR003-HOTEL-FORM]
 requirements: [REQ-FUNC-013, REQ-FUNC-021]
-status: TODO
+status: DONE
 ---
 
 # UNIT-TRAVEL-DATES — 날짜 검증 Unit Test

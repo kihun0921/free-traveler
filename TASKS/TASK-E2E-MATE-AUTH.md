@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [PAGE-SCR004, PAGE-SCR005]
 requirements: [REQ-FUNC-027, REQ-FUNC-034, REQ-FUNC-036, REQ-FUNC-039, REQ-FUNC-040]
-status: TODO
+status: DONE
 ---
 
 # E2E-MATE-AUTH — 동행·인증 흐름 Smoke(Chromium)

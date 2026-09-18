@@ -1,4 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { generateSEOMetadata, PAGE_METADATA } from "@/lib/seo";
+
+export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.unauthorized);
 
 export default function UnauthorizedPage() {
   return (

@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [AUTH-SUPABASE-SETUP]
 requirements: [REQ-FUNC-028, REQ-FUNC-029]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR005-PROFILE — Member: 프로필·성인확인

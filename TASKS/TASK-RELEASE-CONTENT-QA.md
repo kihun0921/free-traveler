@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-CONTENT-VALIDATION]
 requirements: [REQ-FUNC-008, REQ-FUNC-046, REQ-FUNC-074, REQ-NF-026, REQ-NF-027]
-status: TODO
+status: DONE
 ---
 
 # RELEASE-CONTENT-QA — 콘텐츠 완전성 게이트

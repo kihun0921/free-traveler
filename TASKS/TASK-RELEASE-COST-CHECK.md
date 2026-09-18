@@ -11,7 +11,7 @@ page_entry: -
 priority: P2
 depends_on: []
 requirements: [REQ-NF-034]
-status: TODO
+status: DONE
 ---
 
 # RELEASE-COST-CHECK — 월 인프라 비용 점검

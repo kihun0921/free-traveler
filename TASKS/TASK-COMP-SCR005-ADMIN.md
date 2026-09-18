@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-BLOCK-REPORT, API-ADMIN-SETTINGS]
 requirements: [REQ-FUNC-041, REQ-FUNC-077]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR005-ADMIN — Admin: 신고 상태·외부 URL 설정

@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [COMP-GLOBAL-A11Y]
 requirements: [REQ-NF-025]
-status: TODO
+status: DONE
 ---
 
 # RELEASE-A11Y-MANUAL — 접근성 수동 점검

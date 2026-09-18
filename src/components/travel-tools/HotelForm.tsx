@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { validateOutboundUrl, redirectToOutbound } from "@/lib/outbound";
+import { redirectToOutbound } from "@/lib/outbound";
 
 interface HotelFormState {
   step: "input" | "summary";

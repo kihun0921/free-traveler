@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-CONTENT-VALIDATION, SEC-BASELINE]
 requirements: [REQ-NF-031]
-status: TODO
+status: DONE
 ---
 
 # CI-LINT-TYPECHECK-UNIT — CI 파이프라인(Lint/Typecheck/Unit/Build)

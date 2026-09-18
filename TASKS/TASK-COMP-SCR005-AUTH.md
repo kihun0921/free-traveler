@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [AUTH-SUPABASE-SETUP]
 requirements: [REQ-FUNC-066]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR005-AUTH — Guest: 로그인/가입/재설정

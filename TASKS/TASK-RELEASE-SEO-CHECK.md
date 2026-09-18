@@ -11,7 +11,7 @@ page_entry: -
 priority: P2
 depends_on: [COMP-GLOBAL-SEO]
 requirements: [REQ-FUNC-070, REQ-NF-030]
-status: TODO
+status: DONE
 ---
 
 # RELEASE-SEO-CHECK — SEO 메타데이터 점검

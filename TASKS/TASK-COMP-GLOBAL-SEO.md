@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: []
 requirements: [REQ-FUNC-070, REQ-NF-030]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-SEO — 페이지별 SEO 메타데이터

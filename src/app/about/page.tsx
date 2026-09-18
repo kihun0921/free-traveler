@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/about/Hero";
 import { CountryChips } from "@/components/about/CountryChips";
 import { Gallery } from "@/components/about/Gallery";
@@ -5,11 +6,9 @@ import { IntroPhilosophy } from "@/components/about/IntroPhilosophy";
 import { Recommended } from "@/components/about/Recommended";
 import { Stats } from "@/components/about/Stats";
 import { Timeline } from "@/components/about/Timeline";
+import { generateSEOMetadata, PAGE_METADATA } from "@/lib/seo";
 
-export const metadata = {
-  title: "대표 소개 | Free Traveler",
-  description: "Free Traveler의 창시자, 25년 여행 경험, 그리고 여행 철학",
-};
+export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.about);
 
 export default function AboutPage() {
   return (

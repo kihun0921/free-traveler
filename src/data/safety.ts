@@ -587,4 +587,5 @@ const SAFETY_INFO: SafetyInfo[] = [
   },
 ];
 
+export { SAFETY_INFO };
 export default SAFETY_INFO;

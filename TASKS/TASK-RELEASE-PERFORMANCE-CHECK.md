@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [PAGE-SCR001, PAGE-SCR002, PAGE-SCR003, PAGE-SCR004, PAGE-SCR005]
 requirements: [REQ-NF-001, REQ-NF-002, REQ-NF-003, REQ-NF-004, REQ-NF-005, REQ-NF-006, REQ-NF-019]
-status: TODO
+status: DONE
 ---
 
 # RELEASE-PERFORMANCE-CHECK — 성능 목표 수동 점검

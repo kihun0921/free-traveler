@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-MATE-POSTS, API-BLOCK-REPORT, COMP-GLOBAL-FAVORITE-TOGGLE]
 requirements: [REQ-FUNC-038, REQ-FUNC-040]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR005-MY-ACTIVITY — Member: 내 글/참가요청/즐겨찾기/차단

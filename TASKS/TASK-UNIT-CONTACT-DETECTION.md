@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-CONTACT-DETECTION]
 requirements: [REQ-FUNC-032]
-status: TODO
+status: DONE
 ---
 
 # UNIT-CONTACT-DETECTION — 연락처 탐지 Unit Test

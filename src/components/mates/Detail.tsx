@@ -37,12 +37,23 @@ export function Detail({ post, profile, isOpen, onClose }: DetailProps) {
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
+      <div
+        className="fixed inset-0 bg-black/50"
+        onClick={onClose}
+        role="presentation"
+        aria-hidden="true"
+      />
 
       <div className="relative min-h-screen flex items-end sm:items-center sm:justify-center">
-        <div className="relative bg-white w-full sm:rounded-lg sm:shadow-xl sm:max-w-2xl">
+        <div
+          className="relative bg-white w-full sm:rounded-lg sm:shadow-xl sm:max-w-2xl"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="detail-title"
+        >
           <button
             onClick={onClose}
+            aria-label="닫기"
             className="absolute right-4 top-4 text-gray-400 hover:text-gray-600 z-10"
           >
             ✕
@@ -50,7 +61,7 @@ export function Detail({ post, profile, isOpen, onClose }: DetailProps) {
 
           <div className="space-y-6 p-6 sm:p-8">
             <div>
-              <h2 className="mb-2 text-2xl font-bold text-gray-900">
+              <h2 id="detail-title" className="mb-2 text-2xl font-bold text-gray-900">
                 {post.title}
               </h2>
               <p className="text-gray-600">

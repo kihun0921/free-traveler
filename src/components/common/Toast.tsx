@@ -51,6 +51,8 @@ function ToastViewport() {
         <div
           key={toast.id}
           role="status"
+          aria-live="polite"
+          aria-atomic="true"
           className={`pointer-events-auto max-w-[calc(100vw-32px)] rounded-[8px] px-4 py-3 text-[14px] leading-[1.57] shadow-[0_1px_2px_rgba(36,36,42,.04),0_8px_24px_-4px_rgba(36,36,42,.06)] md:max-w-[360px] ${VARIANT_STYLES[toast.variant]}`}
         >
           {toast.message}

@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [PAGE-SCR001, PAGE-SCR002]
 requirements: [REQ-FUNC-001, REQ-FUNC-004, REQ-FUNC-047, REQ-NF-024]
-status: TODO
+status: DONE
 ---
 
 # E2E-PUBLIC-SMOKE — 공개 화면 Smoke(Chromium)

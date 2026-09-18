@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/destinations/Hero";
 import { DomesticGrid } from "@/components/destinations/DomesticGrid";
 import { OverseasGrid } from "@/components/destinations/OverseasGrid";
@@ -5,6 +6,9 @@ import { SafetyGrid } from "@/components/destinations/SafetyGrid";
 import { ThemeChips } from "@/components/destinations/ThemeChips";
 import { MatePreview } from "@/components/destinations/MatePreview";
 import { AboutTeaser } from "@/components/destinations/AboutTeaser";
+import { generateSEOMetadata, PAGE_METADATA } from "@/lib/seo";
+
+export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.home);
 
 export default function Home() {
   return (

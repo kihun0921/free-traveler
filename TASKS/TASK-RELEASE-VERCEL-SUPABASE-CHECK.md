@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [SEC-BASELINE, DB-ACCESS]
 requirements: [REQ-NF-012, REQ-NF-016]
-status: TODO
+status: DONE
 ---
 
 # RELEASE-VERCEL-SUPABASE-CHECK — Vercel/Supabase 배포 확인

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
+import { generateSEOMetadata, PAGE_METADATA } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "콘텐츠 면책 안내 | Free Traveler",
-};
+export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.contentDisclaimer);
 
 const POLICY_VERSION = "1.0";
 const POLICY_EFFECTIVE_DATE = "2026-09-17";

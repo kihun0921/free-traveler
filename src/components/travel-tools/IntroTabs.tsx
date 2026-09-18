@@ -20,25 +20,28 @@ export function IntroTabs({ children }: IntroTabsProps) {
   return (
     <div className="space-y-6">
       <div className="border-b border-gray-200">
-        <div className="flex gap-8">
+        <div className="flex gap-8" role="tablist">
           {TABS.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              aria-controls={`${tab.id}-panel`}
               className={`pb-4 font-medium transition-colors ${
                 activeTab === tab.id
                   ? "border-b-2 border-red-500 text-gray-900"
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
-              <span className="mr-2">{tab.icon}</span>
+              <span className="mr-2" aria-hidden="true">{tab.icon}</span>
               {tab.label}
             </button>
           ))}
         </div>
       </div>
 
-      <div>
+      <div id={`${activeTab}-panel`} role="tabpanel" aria-labelledby={`${activeTab}-tab`}>
         {children ? (
           children
         ) : (

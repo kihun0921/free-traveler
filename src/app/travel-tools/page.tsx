@@ -1,13 +1,12 @@
+import type { Metadata } from "next";
 import { IntroTabs } from "@/components/travel-tools/IntroTabs";
 import { FlightForm } from "@/components/travel-tools/FlightForm";
 import { HotelForm } from "@/components/travel-tools/HotelForm";
 import { MateWrite } from "@/components/travel-tools/MateWrite";
 import { Tips } from "@/components/travel-tools/Tips";
+import { generateSEOMetadata, PAGE_METADATA } from "@/lib/seo";
 
-export const metadata = {
-  title: "여행 준비 도구 | Free Traveler",
-  description: "항공편, 숙소, 동행 찾기 그리고 여행 팁",
-};
+export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.travelTools);
 
 export default function TravelToolsPage() {
   return (

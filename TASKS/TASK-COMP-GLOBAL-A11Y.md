@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: []
 requirements: [REQ-FUNC-079, REQ-NF-023, REQ-NF-024]
-status: TODO
+status: DONE
 ---
 
 # COMP-GLOBAL-A11Y — 시맨틱 HTML·ARIA 공통 규칙

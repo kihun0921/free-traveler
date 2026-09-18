@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-MATE-APPLICATIONS, API-MATE-POSTS]
 requirements: [REQ-FUNC-035, REQ-FUNC-036, REQ-FUNC-037]
-status: TODO
+status: DONE
 ---
 
 # UNIT-MATE-STATE — 동행 상태 전이 Unit Test
