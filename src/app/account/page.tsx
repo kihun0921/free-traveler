@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getCurrentUser } from "@/lib/auth";
+import { isAdminEmail } from "@/lib/admin";
 import AuthPanel from "@/components/account/AuthPanel";
 import ProfilePanel from "@/components/account/ProfilePanel";
 import MyActivityPanel from "@/components/account/MyActivityPanel";
@@ -8,10 +9,6 @@ import AdminPanel from "@/components/account/AdminPanel";
 import { generateSEOMetadata, PAGE_METADATA } from "@/lib/seo";
 
 export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.account);
-
-function isAdminEmail(email: string | null | undefined) {
-  return Boolean(email?.endsWith("@admin.traveler.local"));
-}
 
 export default async function AccountPage() {
   const user = await getCurrentUser();

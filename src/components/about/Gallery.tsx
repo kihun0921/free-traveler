@@ -63,7 +63,7 @@ export function Gallery() {
     <div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
         {GALLERY_IMAGES.map((image) => (
-          <div key={image.id} className="overflow-hidden rounded-lg bg-gray-200">
+          <div key={image.id} className="overflow-hidden rounded-lg bg-surface-container-high">
             <div className="relative h-64 w-full">
               <Image
                 src={image.url}
@@ -73,8 +73,8 @@ export function Gallery() {
                 sizes="(max-width: 768px) 100vw, 25vw"
               />
             </div>
-            <div className="bg-white p-3">
-              <p className="text-sm font-medium text-gray-900">
+            <div className="bg-canvas p-3">
+              <p className="text-sm font-medium text-ink">
                 {image.location}
               </p>
             </div>

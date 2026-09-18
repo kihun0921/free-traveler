@@ -1,4 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/auth";
+import { isAdminEmail } from "@/lib/admin";
 import { NextResponse } from "next/server";
 
 interface OutboundSettings {
@@ -21,6 +23,17 @@ function validateUrl(url: string): boolean {
 
 export async function GET() {
   try {
+    const user = await getCurrentUser();
+    if (!user?.profile) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    if (!isAdminEmail(user.email)) {
+      return NextResponse.json(
+        { error: "Admin access required" },
+        { status: 403 },
+      );
+    }
+
     const supabase = await createClient();
 
     const { data, error } = await supabase
@@ -54,6 +67,17 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    const user = await getCurrentUser();
+    if (!user?.profile) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    if (!isAdminEmail(user.email)) {
+      return NextResponse.json(
+        { error: "Admin access required" },
+        { status: 403 },
+      );
+    }
+
     const body: Partial<OutboundSettings> = await request.json();
 
     // Validate URLs

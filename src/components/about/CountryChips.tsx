@@ -50,14 +50,14 @@ export function CountryChips() {
     <div className="space-y-8">
       {COUNTRY_GROUPS.map((group) => (
         <div key={group.region}>
-          <h3 className="mb-4 text-lg font-semibold text-gray-900">
+          <h3 className="mb-4 text-lg font-semibold text-ink">
             {group.region}
           </h3>
           <div className="flex flex-wrap gap-2">
             {group.countries.map((country) => (
               <span
                 key={country}
-                className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-900"
+                className="inline-flex items-center rounded-full bg-surface-container px-3 py-1 text-sm font-medium text-ink"
               >
                 {country}
               </span>

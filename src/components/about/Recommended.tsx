@@ -22,10 +22,10 @@ export function Recommended() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="mb-4 text-2xl font-bold text-gray-900">
+        <h2 className="mb-4 text-2xl font-bold text-ink">
           직접 추천하는 여행지
         </h2>
-        <p className="text-gray-600">
+        <p className="text-body">
           25년의 경험 중에서 꼭 방문해야 할 곳들을 선별했습니다.
         </p>
       </div>
@@ -34,7 +34,7 @@ export function Recommended() {
         {recommendedDests.map(({ destination, reason }) => (
           <div
             key={destination!.id}
-            className="overflow-hidden rounded-lg bg-white shadow"
+            className="overflow-hidden rounded-lg bg-canvas shadow"
           >
             <div className="relative h-48 w-full">
               <Image
@@ -45,11 +45,11 @@ export function Recommended() {
               />
             </div>
             <div className="p-4">
-              <h3 className="mb-2 text-lg font-semibold text-gray-900">
+              <h3 className="mb-2 text-lg font-semibold text-ink">
                 {destination!.name}
               </h3>
-              <p className="mb-3 text-sm text-gray-500">{destination!.country}</p>
-              <p className="text-gray-700">{reason}</p>
+              <p className="mb-3 text-sm text-muted">{destination!.country}</p>
+              <p className="text-ink">{reason}</p>
             </div>
           </div>
         ))}

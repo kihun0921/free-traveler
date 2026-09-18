@@ -29,8 +29,8 @@ export function IntroPhilosophy() {
   return (
     <div className="space-y-12">
       <div>
-        <h2 className="mb-8 text-2xl font-bold text-gray-900">여행 철학</h2>
-        <p className="mb-8 max-w-3xl leading-relaxed text-gray-700">
+        <h2 className="mb-8 text-2xl font-bold text-ink">여행 철학</h2>
+        <p className="mb-8 max-w-3xl leading-relaxed text-ink">
           여행은 누구나 할 수 있어야 합니다. 여행 정보는 투명하고 접근 가능해야 하며, 혼자라도 안전하게
           동행을 찾을 수 있어야 합니다. Free Traveler는 기성 패키지 여행 대행사가 아닌, 스스로 계획하고
           결정하는 여행자를 응원합니다.
@@ -39,12 +39,12 @@ export function IntroPhilosophy() {
 
       <div className="grid gap-6 md:grid-cols-3">
         {PHILOSOPHY_CARDS.map((card) => (
-          <div key={card.title} className="rounded-lg bg-gray-50 p-6">
+          <div key={card.title} className="rounded-lg bg-surface-soft p-6">
             <div className="mb-4 text-4xl">{card.icon}</div>
-            <h3 className="mb-3 text-lg font-semibold text-gray-900">
+            <h3 className="mb-3 text-lg font-semibold text-ink">
               {card.title}
             </h3>
-            <p className="text-gray-700">{card.description}</p>
+            <p className="text-ink">{card.description}</p>
           </div>
         ))}
       </div>

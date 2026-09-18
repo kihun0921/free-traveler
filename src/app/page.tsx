@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Hero } from "@/components/destinations/Hero";
 import { DomesticGrid } from "@/components/destinations/DomesticGrid";
 import { OverseasGrid } from "@/components/destinations/OverseasGrid";
@@ -16,7 +17,9 @@ export default function Home() {
       {/* S1: Hero Search */}
       <section className="px-base pt-lg lg:px-base lg:pt-xl">
         <div className="mx-auto max-w-content-desktop">
-          <Hero />
+          <Suspense fallback={null}>
+            <Hero />
+          </Suspense>
         </div>
       </section>
 

@@ -12,59 +12,56 @@ export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.about);
 
 export default function AboutPage() {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-canvas">
       {/* S1: Hero */}
-      <section className="border-b border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="border-b border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
           <Hero />
         </div>
       </section>
 
-      {/* S2: Stats */}
-      <section className="border-b border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
+      {/* S2: 여행 지표 */}
+      <section className="border-b border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <h2 className="mb-lg text-headline-lg text-ink">여행 지표</h2>
           <Stats />
         </div>
       </section>
 
-      {/* S3: Country Chips */}
-      <section className="border-b border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-8 text-2xl font-bold text-gray-900">
-            방문한 국가
-          </h2>
-          <CountryChips />
-        </div>
-      </section>
-
-      {/* S4: Gallery */}
-      <section className="border-b border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-8 text-2xl font-bold text-gray-900">
-            여행 스냅샷
-          </h2>
-          <Gallery />
-        </div>
-      </section>
-
-      {/* S5: Philosophy */}
-      <section className="border-b border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
+      {/* S3: 소개·철학 */}
+      <section className="border-b border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
           <IntroPhilosophy />
         </div>
       </section>
 
-      {/* S6: Recommended */}
-      <section className="border-b border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <Recommended />
+      {/* S4: 여행 Timeline */}
+      <section className="border-b border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <Timeline />
         </div>
       </section>
 
-      {/* S7: Timeline */}
-      <section className="px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <Timeline />
+      {/* S5: 방문 국가 */}
+      <section className="border-b border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <h2 className="mb-lg text-headline-lg text-ink">방문한 국가</h2>
+          <CountryChips />
+        </div>
+      </section>
+
+      {/* S6: 여행 사진 Gallery */}
+      <section className="border-b border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <h2 className="mb-lg text-headline-lg text-ink">여행 스냅샷</h2>
+          <Gallery />
+        </div>
+      </section>
+
+      {/* S7: 기억에 남는 여행지 + CTA */}
+      <section className="px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <Recommended />
         </div>
       </section>
     </main>

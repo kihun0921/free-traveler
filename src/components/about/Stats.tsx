@@ -12,13 +12,16 @@ const STATS: Stat[] = [
 
 export function Stats() {
   return (
-    <div className="grid gap-8 md:grid-cols-4">
+    <div className="grid gap-base md:grid-cols-4">
       {STATS.map((stat) => (
-        <div key={stat.label} className="text-center">
-          <div className="mb-2 text-4xl font-bold text-primary">
+        <div
+          key={stat.label}
+          className="rounded-md border border-hairline bg-surface-soft py-lg text-center"
+        >
+          <div className="mb-xs text-headline-lg text-primary font-bold">
             {stat.value}
           </div>
-          <div className="text-sm text-body">{stat.label}</div>
+          <div className="text-body-sm text-body">{stat.label}</div>
         </div>
       ))}
     </div>
