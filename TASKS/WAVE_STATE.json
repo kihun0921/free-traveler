@@ -259,9 +259,15 @@
                                        "COMP-SCR004-REPORT-BLOCK",
                                        "PAGE-SCR004"
                                    ],
-                      "status":  "in_progress",
+                      "status":  "completed",
                       "checkpoint_required":  true,
-                      "checkpoint_result":  null,
+                      "checkpoint_result":  {
+                                                "status":  "CONFIRMED",
+                                                "timestamp":  "2026-09-18T12:45:00+00:00",
+                                                "screens_verified":  [
+                                                                         "SCR-004"
+                                                                     ]
+                                            },
                       "taskStatuses":  {
                                            "API-BLOCK-REPORT":  "done",
                                            "COMP-SCR004-APPLY":  "done",
@@ -270,9 +276,8 @@
                                        },
                       "blockedTaskId":  null,
                       "blockedReason":  null,
-                      "status":  "completed",
                       "startedAt":  "2026-09-18T12:00:00+00:00",
-                      "completedAt":  "2026-09-18T12:30:00+00:00"
+                      "completedAt":  "2026-09-18T12:45:00+00:00"
                   },
                   {
                       "wave_id":  "W11",
