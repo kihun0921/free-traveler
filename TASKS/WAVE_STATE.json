@@ -172,9 +172,15 @@
                                        "COMP-SCR003-INTRO-TABS",
                                        "PAGE-SCR002"
                                    ],
-                      "status":  "pending",
+                      "status":  "in_progress",
                       "checkpoint_required":  true,
-                      "checkpoint_result":  null
+                      "checkpoint_result":  null,
+                      "taskStatuses":  {
+                                           "API-OUTBOUND-VALIDATION":  "done",
+                                           "COMP-SCR003-FLIGHT-FORM":  "done",
+                                           "COMP-SCR003-INTRO-TABS":  "done",
+                                           "PAGE-SCR002":  "done"
+                                       }
                   },
                   {
                       "wave_id":  "W08",

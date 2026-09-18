@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR003-INTRO-TABS
 seq: 22
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: []
 requirements: []
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR003-INTRO-TABS — Intro+탭 전환(Section1·2)

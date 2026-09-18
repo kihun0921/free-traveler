@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR003-FLIGHT-FORM
 seq: 23
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-OUTBOUND-VALIDATION, DATA-SAFETY]
 requirements: [REQ-FUNC-011, REQ-FUNC-012, REQ-FUNC-013, REQ-FUNC-014, REQ-FUNC-015, REQ-FUNC-016, REQ-FUNC-017, REQ-FUNC-018, REQ-FUNC-054, REQ-NF-017]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR003-FLIGHT-FORM — 항공 조건 입력·요약·외부이동(Section3·4·5)

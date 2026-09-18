@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: API-OUTBOUND-VALIDATION
 seq: 60
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-ADMIN-SETTINGS]
 requirements: [REQ-FUNC-016, REQ-FUNC-017, REQ-FUNC-018, REQ-FUNC-024, REQ-FUNC-025, REQ-FUNC-026, REQ-NF-017]
-status: TODO
+status: DONE
 ---
 
 # API-OUTBOUND-VALIDATION — 외부 이동 URL 검증 로직

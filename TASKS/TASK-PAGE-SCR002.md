@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: PAGE-SCR002
 seq: 2
@@ -11,7 +11,7 @@ page_entry: `src/app/about/page.tsx`
 priority: P0
 depends_on: [COMP-SCR002-HERO, COMP-SCR002-STATS, COMP-SCR002-INTRO-PHILOSOPHY, COMP-SCR002-TIMELINE, COMP-SCR002-COUNTRY-CHIPS, COMP-SCR002-GALLERY, COMP-SCR002-RECOMMENDED, COMP-GLOBAL-HEADER-FOOTER, DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-057, REQ-FUNC-058, REQ-FUNC-059, REQ-FUNC-060, REQ-FUNC-061, REQ-FUNC-063]
-status: TODO
+status: DONE
 ---
 
 # PAGE-SCR002 — SCR-002 `/about` Page Owner
