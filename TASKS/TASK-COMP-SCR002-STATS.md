@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR002-STATS
 seq: 16
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-057]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR002-STATS — 여행 지표 Card(Section2)

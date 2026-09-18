@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR002-INTRO-PHILOSOPHY
 seq: 17
@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-058]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR002-INTRO-PHILOSOPHY — 소개·철학 Split(Section3)

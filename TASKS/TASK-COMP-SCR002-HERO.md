@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR002-HERO
 seq: 15
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-061]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR002-HERO — free_traveler Hero(Section1)

@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR002-TIMELINE
 seq: 18
@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-060]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR002-TIMELINE — 여행 Timeline(Section4)

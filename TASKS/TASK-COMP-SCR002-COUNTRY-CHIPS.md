@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-059]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR002-COUNTRY-CHIPS — 방문 국가 Chip(Section5)

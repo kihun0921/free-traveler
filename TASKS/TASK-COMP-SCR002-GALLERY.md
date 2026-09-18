@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR002-GALLERY
 seq: 20
@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [DATA-REPRESENTATIVE]
 requirements: [REQ-FUNC-061]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR002-GALLERY — 여행 사진 Gallery(Section6)
