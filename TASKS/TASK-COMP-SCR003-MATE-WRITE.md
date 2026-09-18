@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR003-MATE-WRITE
 seq: 26
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-MATE-POSTS, API-CONTACT-DETECTION, AUTH-SUPABASE-SETUP, COMP-GLOBAL-POLICY-PAGES]
 requirements: [REQ-FUNC-031, REQ-FUNC-032, REQ-FUNC-080]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR003-MATE-WRITE — 동행 구하기: 작성 Form/로그인 안내(Section6)

@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR003-HOTEL-FORM
 seq: 24
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-OUTBOUND-VALIDATION]
 requirements: [REQ-FUNC-019, REQ-FUNC-020, REQ-FUNC-021, REQ-FUNC-022, REQ-FUNC-023, REQ-FUNC-024, REQ-FUNC-025, REQ-FUNC-026, REQ-NF-017]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR003-HOTEL-FORM — 숙소 조건 입력·요약·외부이동(Section3·4·5)

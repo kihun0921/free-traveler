@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: COMP-SCR003-TIPS
 seq: 25
@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: [COMP-SCR003-FLIGHT-FORM, COMP-SCR003-HOTEL-FORM]
 requirements: []
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR003-TIPS — 비전달 고지+찾기 Tip 3개(Section5)

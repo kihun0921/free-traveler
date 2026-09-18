@@ -172,9 +172,16 @@
                                        "COMP-SCR003-INTRO-TABS",
                                        "PAGE-SCR002"
                                    ],
-                      "status":  "in_progress",
+                      "status":  "completed",
                       "checkpoint_required":  true,
-                      "checkpoint_result":  null,
+                      "checkpoint_result":  {
+                                                "status":  "CONFIRMED",
+                                                "screens_verified":  [
+                                                                         "SCR-002"
+                                                                     ],
+                                                "confirmed_at":  "2026-09-18T08:23:28.0730406+00:00",
+                                                "confirmed_by":  "user"
+                                            },
                       "taskStatuses":  {
                                            "API-OUTBOUND-VALIDATION":  "done",
                                            "COMP-SCR003-FLIGHT-FORM":  "done",
@@ -192,9 +199,16 @@
                                        "COMP-SCR003-TIPS",
                                        "PAGE-SCR003"
                                    ],
-                      "status":  "pending",
+                      "status":  "in_progress",
                       "checkpoint_required":  true,
-                      "checkpoint_result":  null
+                      "checkpoint_result":  null,
+                      "taskStatuses":  {
+                                           "COMP-SCR003-MATE-WRITE":  "done",
+                                           "COMP-SCR003-HOTEL-FORM":  "done",
+                                           "PAGE-SCR003":  "done",
+                                           "API-CONTACT-DETECTION":  "done",
+                                           "COMP-SCR003-TIPS":  "done"
+                                       }
                   },
                   {
                       "wave_id":  "W09",

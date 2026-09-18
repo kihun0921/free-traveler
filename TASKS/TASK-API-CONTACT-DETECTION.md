@@ -1,4 +1,4 @@
----
+﻿---
 schema: traveler-screen-route-v1
 task_id: API-CONTACT-DETECTION
 seq: 61
@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: []
 requirements: [REQ-FUNC-032]
-status: TODO
+status: DONE
 ---
 
 # API-CONTACT-DETECTION — 공개 연락처 탐지 로직
