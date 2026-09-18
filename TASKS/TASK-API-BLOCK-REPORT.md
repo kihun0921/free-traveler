@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [DB-ACCESS]
 requirements: [REQ-FUNC-039, REQ-FUNC-040, REQ-FUNC-041, REQ-NF-019]
-status: TODO
+status: DONE
 ---
 
 # API-BLOCK-REPORT — 차단·신고 API

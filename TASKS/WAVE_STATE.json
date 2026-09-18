@@ -233,7 +233,7 @@
                                        "COMP-SCR004-SAFETY-CTA",
                                        "COMP-SCR004-STEPS"
                                    ],
-                      "status":  "in_progress",
+                      "status":  "completed",
                       "checkpoint_required":  false,
                       "checkpoint_result":  null,
                       "taskStatuses":  {
@@ -245,12 +245,10 @@
                                            "COMP-SCR004-SAFETY-CTA":  "done",
                                            "COMP-SCR004-STEPS":  "done"
                                        },
-                      "startedAt":  "2026-09-18T00:00:00+00:00",
-                      "completedAt":  "2026-09-18T00:00:00+00:00"
                       "blockedTaskId":  null,
                       "blockedReason":  null,
                       "startedAt":  "2026-09-18T00:00:00+00:00",
-                      "completedAt":  null
+                      "completedAt":  "2026-09-18T00:00:00+00:00"
                   },
                   {
                       "wave_id":  "W10",
@@ -261,9 +259,19 @@
                                        "COMP-SCR004-REPORT-BLOCK",
                                        "PAGE-SCR004"
                                    ],
-                      "status":  "pending",
+                      "status":  "in_progress",
                       "checkpoint_required":  true,
-                      "checkpoint_result":  null
+                      "checkpoint_result":  null,
+                      "taskStatuses":  {
+                                           "API-BLOCK-REPORT":  "done",
+                                           "COMP-SCR004-APPLY":  "done",
+                                           "COMP-SCR004-REPORT-BLOCK":  "pending",
+                                           "PAGE-SCR004":  "pending"
+                                       },
+                      "blockedTaskId":  null,
+                      "blockedReason":  null,
+                      "startedAt":  "2026-09-18T12:00:00+00:00",
+                      "completedAt":  null
                   },
                   {
                       "wave_id":  "W11",

@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [COMP-SCR004-LIST]
 requirements: [REQ-FUNC-033]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR004-DETAIL — 목록+상세 분할/Drawer(Section4)

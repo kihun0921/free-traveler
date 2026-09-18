@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [COMP-SCR004-DETAIL, API-MATE-APPLICATIONS, AUTH-SUPABASE-SETUP]
 requirements: [REQ-FUNC-034, REQ-FUNC-036]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR004-APPLY — 참가 요청 제출·승인·거절
