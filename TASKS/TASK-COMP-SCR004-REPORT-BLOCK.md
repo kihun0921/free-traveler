@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [COMP-SCR004-DETAIL, API-BLOCK-REPORT]
 requirements: [REQ-FUNC-039, REQ-FUNC-040]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR004-REPORT-BLOCK — 신고·차단 버튼
