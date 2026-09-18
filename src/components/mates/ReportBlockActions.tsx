@@ -96,10 +96,10 @@ export function ReportBlockActions({
   };
 
   return (
-    <div className="space-y-3 border-t border-gray-200 px-6 py-4 sm:px-8">
+    <div className="space-y-3 border-t border-hairline px-6 py-4 sm:px-8">
       <button
         onClick={() => setIsReportOpen(!isReportOpen)}
-        className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-center font-medium text-gray-700 hover:bg-gray-50 disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed"
+        className="w-full rounded-lg border border-hairline-strong bg-canvas px-4 py-2 text-center font-medium text-body hover:bg-surface-container disabled:bg-surface-container disabled:text-muted disabled:cursor-not-allowed"
         disabled={isReportLoading || isBlockLoading}
       >
         신고하기
@@ -108,16 +108,16 @@ export function ReportBlockActions({
       <button
         onClick={handleBlock}
         disabled={isBlockLoading || isReportLoading}
-        className="w-full rounded-lg border border-red-300 bg-red-50 px-4 py-2 text-center font-medium text-red-700 hover:bg-red-100 disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed"
+        className="w-full rounded-lg border border-critical-border bg-critical-surface px-4 py-2 text-center font-medium text-critical-text hover:bg-critical-border disabled:bg-surface-container disabled:text-muted disabled:cursor-not-allowed"
       >
         {isBlockLoading ? "차단 중..." : "차단하기"}
       </button>
 
       {isReportOpen && (
-        <div className="rounded-lg bg-gray-50 p-4 space-y-3">
+        <div className="rounded-lg bg-surface-container p-4 space-y-3">
           <form onSubmit={handleReport} className="space-y-3">
             <div>
-              <label className="block text-sm font-medium text-gray-900 mb-2">
+              <label className="block text-sm font-medium text-ink mb-2">
                 신고 사유 ({reportReason.length}/500자)
               </label>
               <textarea
@@ -125,7 +125,7 @@ export function ReportBlockActions({
                 onChange={(e) => setReportReason(e.target.value)}
                 maxLength={500}
                 placeholder="신고 사유를 입력해주세요"
-                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                className="w-full rounded-lg border border-hairline-strong bg-canvas px-3 py-2 text-ink placeholder-muted focus:border-focus-ring focus:border-2 focus:outline-none"
                 rows={4}
                 disabled={isReportLoading}
               />
@@ -135,7 +135,7 @@ export function ReportBlockActions({
               <button
                 type="submit"
                 disabled={isReportLoading || !reportReason.trim()}
-                className="flex-1 rounded-lg bg-blue-600 py-2 font-medium text-white hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="flex-1 rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover disabled:bg-primary-disabled disabled:cursor-not-allowed"
               >
                 {isReportLoading ? "제출 중..." : "신고 제출"}
               </button>
@@ -146,7 +146,7 @@ export function ReportBlockActions({
                   setReportReason("");
                 }}
                 disabled={isReportLoading}
-                className="flex-1 rounded-lg border border-gray-300 bg-white py-2 font-medium text-gray-700 hover:bg-gray-50 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="flex-1 rounded-lg border border-hairline-strong bg-canvas py-2 font-medium text-body hover:bg-surface-container disabled:bg-surface-container disabled:cursor-not-allowed"
               >
                 취소
               </button>

@@ -12,18 +12,18 @@ export const metadata: Metadata = generateSEOMetadata(PAGE_METADATA.home);
 
 export default function Home() {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-canvas">
       {/* S1: Hero Search */}
-      <section className="px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="px-base pt-lg lg:px-base lg:pt-xl">
+        <div className="mx-auto max-w-content-desktop">
           <Hero />
         </div>
       </section>
 
       {/* S2: Domestic Destinations */}
-      <section className="border-t border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+      <section className="border-t border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <h2 className="text-headline-lg text-ink mb-lg">
             국내 인기 여행지
           </h2>
           <DomesticGrid />
@@ -31,9 +31,9 @@ export default function Home() {
       </section>
 
       {/* S3: Overseas Destinations */}
-      <section className="border-t border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+      <section className="border-t border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <h2 className="text-headline-lg text-ink mb-lg">
             해외 인기 여행지
           </h2>
           <OverseasGrid />
@@ -41,9 +41,9 @@ export default function Home() {
       </section>
 
       {/* S4: Theme Chips */}
-      <section className="border-t border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+      <section className="border-t border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <h2 className="text-headline-lg text-ink mb-lg">
             여행 동기·테마
           </h2>
           <ThemeChips />
@@ -51,9 +51,9 @@ export default function Home() {
       </section>
 
       {/* S5: Country Safety */}
-      <section className="border-t border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+      <section className="border-t border-hairline px-base py-section-mobile-min lg:px-base lg:py-section-desktop-min">
+        <div className="mx-auto max-w-content-desktop">
+          <h2 className="text-headline-lg text-ink mb-lg">
             국가별 주의사항
           </h2>
           <SafetyGrid />

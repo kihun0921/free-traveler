@@ -1,0 +1,14 @@
+﻿<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b6f47;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad2)"/>
+  <text x="400" y="200" font-size="64" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">한옥마을</text>
+  <text x="400" y="280" font-size="32" fill="rgba(255,255,255,0.8)" text-anchor="middle" font-family="Arial">전주</text>
+  <polygon points="100,400 200,350 300,400 200,450" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1"/>
+  <polygon points="400,400 500,350 600,400 500,450" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1"/>
+  <polygon points="700,400 750,360 800,400 750,440" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1"/>
+</svg>

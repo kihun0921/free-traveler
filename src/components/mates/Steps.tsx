@@ -20,22 +20,22 @@ export function Steps() {
   ];
 
   return (
-    <section className="border-t border-gray-200 px-6 py-12 lg:px-12 lg:py-16">
+    <section className="border-t border-hairline px-6 py-12 lg:px-12 lg:py-16">
       <div className="mx-auto max-w-6xl">
-        <h3 className="mb-12 text-center text-2xl font-bold text-gray-900">
+        <h3 className="mb-12 text-center text-2xl font-bold text-ink">
           신청 방법
         </h3>
 
         <div className="grid gap-8 md:grid-cols-3">
           {steps.map((step) => (
             <div key={step.number} className="text-center">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-lg font-bold text-blue-600">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-surface-container text-lg font-bold text-primary">
                 {step.number}
               </div>
-              <h4 className="mb-2 font-semibold text-gray-900">
+              <h4 className="mb-2 font-semibold text-ink">
                 {step.title}
               </h4>
-              <p className="text-gray-600">{step.description}</p>
+              <p className="text-body">{step.description}</p>
             </div>
           ))}
         </div>

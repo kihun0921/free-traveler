@@ -13,30 +13,58 @@ export function OverseasGrid() {
   return (
     <>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
-        {overseasDestinations.slice(0, 6).map((dest) => (
-          <button
-            key={dest.id}
-            onClick={() => {
-              setSelectedDest(dest);
-              setDrawerOpen(true);
-            }}
-            className="group text-left transition-transform hover:scale-105"
-          >
-            <div className="overflow-hidden rounded-lg bg-gray-100">
-              <Image
-                src={dest.image.url}
-                alt={dest.image.alt}
-                width={280}
-                height={160}
-                className="h-40 w-full object-cover"
-              />
-            </div>
-            <h3 className="mt-3 font-semibold text-gray-900 group-hover:text-blue-600">
-              {dest.name}
-            </h3>
-            <p className="text-sm text-gray-600">{dest.country}</p>
-          </button>
-        ))}
+        {overseasDestinations.slice(0, 6).map((dest) => {
+          const oneLineSummary =
+            dest.summary.length > 60
+              ? `${dest.summary.slice(0, 60)}…`
+              : dest.summary;
+          const themeChips = dest.attractions.slice(0, 2);
+
+          return (
+            <button
+              key={dest.id}
+              onClick={() => {
+                setSelectedDest(dest);
+                setDrawerOpen(true);
+              }}
+              className="group rounded-md border border-hairline text-left transition-shadow hover:shadow-card"
+            >
+              <div className="relative overflow-hidden rounded-t-md bg-surface-container">
+                <Image
+                  src={dest.image.url}
+                  alt={dest.image.alt}
+                  width={280}
+                  height={210}
+                  className="aspect-[4/3] w-full object-cover"
+                />
+                <span className="absolute left-3 top-3 inline-flex rounded-sm bg-canvas/90 px-2 py-1 text-xs font-semibold text-ink">
+                  해외
+                </span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-ink group-hover:text-primary">
+                  {dest.name}
+                </h3>
+                <p className="mt-1 text-sm text-body">{dest.country}</p>
+                <p className="mt-2 text-sm text-body line-clamp-1">
+                  {oneLineSummary}
+                </p>
+                {themeChips.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {themeChips.map((chip) => (
+                      <span
+                        key={chip}
+                        className="inline-flex rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-ink"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </button>
+          );
+        })}
       </div>
       <DestinationDrawer
         destination={selectedDest}

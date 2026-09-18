@@ -58,26 +58,26 @@ export function DestinationDrawer({
 
       {/* Drawer Panel */}
       <div
-        className="fixed inset-y-0 right-0 z-50 w-full max-w-[560px] overflow-y-auto bg-white shadow-lg sm:rounded-l-2xl"
+        className="fixed inset-y-0 right-0 z-50 w-full max-w-[560px] overflow-y-auto bg-canvas shadow-lg sm:rounded-l-2xl"
         role="dialog"
         aria-modal="true"
         aria-labelledby="dest-title"
       >
         {/* Sticky Header */}
-        <div className="sticky top-0 border-b border-gray-200 bg-white p-6">
+        <div className="sticky top-0 border-b border-hairline bg-canvas p-6">
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
-              <h2 id="dest-title" className="text-2xl font-bold text-gray-900">
+              <h2 id="dest-title" className="text-2xl font-bold text-ink">
                 {destination.name}
               </h2>
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-sm text-body">
                 {destination.country}
                 {destination.region === "domestic" ? " · 국내" : " · 해외"}
               </p>
             </div>
             <button
               onClick={onClose}
-              className="flex h-11 w-11 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+              className="flex h-11 w-11 items-center justify-center rounded-lg text-muted hover:bg-surface-container hover:text-ink"
               aria-label="Close drawer"
             >
               <svg
@@ -100,7 +100,7 @@ export function DestinationDrawer({
         <div className="space-y-8 p-6">
           {/* Main Image */}
           {destination.image && (
-            <div className="overflow-hidden rounded-lg bg-gray-100">
+            <div className="overflow-hidden rounded-lg bg-surface-container">
               <Image
                 src={destination.image.url}
                 alt={destination.image.alt}
@@ -108,7 +108,7 @@ export function DestinationDrawer({
                 height={256}
                 className="h-64 w-full object-cover"
               />
-              <p className="bg-gray-50 px-4 py-2 text-xs text-gray-600">
+              <p className="bg-surface-soft px-4 py-2 text-xs text-body">
                 {destination.image.alt}
               </p>
             </div>
@@ -116,34 +116,34 @@ export function DestinationDrawer({
 
           {/* Introduction */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               소개
             </h3>
-            <p className="mt-3 text-gray-700 leading-relaxed">
+            <p className="mt-3 text-ink leading-relaxed">
               {destination.summary}
             </p>
           </section>
 
           {/* Best Season */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               추천 방문 시기
             </h3>
-            <p className="mt-3 text-gray-900">{destination.bestSeason}</p>
+            <p className="mt-3 text-ink">{destination.bestSeason}</p>
           </section>
 
           {/* Attractions */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               주요 명소 ({destination.attractions.length}개)
             </h3>
             <ul className="mt-3 space-y-2">
               {destination.attractions.map((attraction, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-semibold text-blue-600">
+                  <span className="inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-surface-container text-xs font-semibold text-ink">
                     {idx + 1}
                   </span>
-                  <span className="text-gray-900">{attraction}</span>
+                  <span className="text-ink">{attraction}</span>
                 </li>
               ))}
             </ul>
@@ -151,21 +151,21 @@ export function DestinationDrawer({
 
           {/* Itineraries */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               추천 일정
             </h3>
             <div className="mt-4 space-y-4">
               <div>
-                <h4 className="font-semibold text-gray-900">1일 일정</h4>
-                <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-700">
+                <h4 className="font-semibold text-ink">1일 일정</h4>
+                <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-ink">
                   {destination.itinerary.oneDay.map((step, idx) => (
                     <li key={idx}>{step}</li>
                   ))}
                 </ol>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">3일 일정</h4>
-                <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-700">
+                <h4 className="font-semibold text-ink">3일 일정</h4>
+                <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-ink">
                   {destination.itinerary.threeDay.map((step, idx) => (
                     <li key={idx}>{step}</li>
                   ))}
@@ -176,28 +176,28 @@ export function DestinationDrawer({
 
           {/* Budget */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               예산 가이드
             </h3>
-            <p className="mt-3 text-gray-700">{destination.budgetGuide}</p>
+            <p className="mt-3 text-ink">{destination.budgetGuide}</p>
           </section>
 
           {/* Transportation */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               교통 안내
             </h3>
-            <p className="mt-3 text-gray-700">{destination.transportation}</p>
+            <p className="mt-3 text-ink">{destination.transportation}</p>
           </section>
 
           {/* Food */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               대표 음식 ({destination.food.length}개)
             </h3>
             <ul className="mt-3 space-y-1">
               {destination.food.map((food, idx) => (
-                <li key={idx} className="text-sm text-gray-900">
+                <li key={idx} className="text-sm text-ink">
                   • {food}
                 </li>
               ))}
@@ -206,12 +206,12 @@ export function DestinationDrawer({
 
           {/* Etiquette */}
           <section>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
               여행 에티켓 ({destination.etiquette.length}개)
             </h3>
             <ul className="mt-3 space-y-1">
               {destination.etiquette.map((rule, idx) => (
-                <li key={idx} className="text-sm text-gray-900">
+                <li key={idx} className="text-sm text-ink">
                   • {rule}
                 </li>
               ))}
@@ -223,7 +223,7 @@ export function DestinationDrawer({
             <section>
               <button
                 onClick={handleSafetyClick}
-                className="w-full rounded-lg bg-red-50 px-4 py-3 text-left font-semibold text-red-900 hover:bg-red-100 transition-colors"
+                className="w-full rounded-lg bg-critical-surface px-4 py-3 text-left font-semibold text-critical-text hover:bg-critical-border transition-colors"
               >
                 🛡️ 안전정보 보기
               </button>
@@ -233,17 +233,17 @@ export function DestinationDrawer({
           {/* Related Destinations */}
           {relatedDestinations.length > 0 && (
             <section>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
                 관련 여행지 ({relatedDestinations.length}개)
               </h3>
               <div className="mt-3 space-y-2">
                 {relatedDestinations.map((dest: Destination) => (
                   <div
                     key={dest.id}
-                    className="rounded-lg border border-gray-200 p-3 hover:border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer"
+                    className="rounded-lg border border-hairline p-3 hover:border-hairline-strong hover:bg-surface-soft transition-colors cursor-pointer"
                   >
-                    <p className="font-medium text-gray-900">{dest.name}</p>
-                    <p className="text-xs text-gray-600">{dest.country}</p>
+                    <p className="font-medium text-ink">{dest.name}</p>
+                    <p className="text-xs text-body">{dest.country}</p>
                   </div>
                 ))}
               </div>
@@ -251,8 +251,8 @@ export function DestinationDrawer({
           )}
 
           {/* Source & Date */}
-          <section className="border-t border-gray-200 pt-6">
-            <p className="text-xs text-gray-600">
+          <section className="border-t border-hairline pt-6">
+            <p className="text-xs text-body">
               최종 확인:{" "}
               {new Date(destination.lastVerifiedAt).toLocaleDateString(
                 "ko-KR"
@@ -263,7 +263,7 @@ export function DestinationDrawer({
                 href={destination.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-sm font-semibold text-blue-600 hover:text-blue-700 underline"
+                className="mt-2 inline-block text-sm font-semibold text-primary hover:text-primary underline"
               >
                 정보 출처 →
               </a>

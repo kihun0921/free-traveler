@@ -165,6 +165,7 @@ export async function GET(request: NextRequest) {
     const { data, error } = await query;
 
     if (error) {
+      console.error("[api/mates GET] Supabase error:", error);
       return NextResponse.json(
         { error: "Failed to fetch mate posts" },
         { status: 500 },

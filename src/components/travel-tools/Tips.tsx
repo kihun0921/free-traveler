@@ -55,18 +55,18 @@ const TRAVEL_TIPS: Tip[] = [
 export function Tips() {
   return (
     <div className="space-y-8">
-      <h3 className="text-lg font-semibold text-gray-900">여행 팁</h3>
+      <h3 className="text-lg font-semibold text-ink">여행 팁</h3>
 
       <div className="grid gap-6 md:grid-cols-2">
         {TRAVEL_TIPS.map((tip) => (
-          <div key={tip.id} className="rounded-lg bg-gray-50 p-4">
-            <div className="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
+          <div key={tip.id} className="rounded-lg bg-surface-soft p-4">
+            <div className="mb-2 inline-block rounded-full bg-surface-container px-3 py-1 text-sm font-medium text-ink">
               {tip.category}
             </div>
-            <h4 className="mb-3 text-base font-semibold text-gray-900">
+            <h4 className="mb-3 text-base font-semibold text-ink">
               {tip.title}
             </h4>
-            <p className="text-sm text-gray-700">{tip.content}</p>
+            <p className="text-sm text-body">{tip.content}</p>
           </div>
         ))}
       </div>

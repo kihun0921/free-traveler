@@ -67,12 +67,12 @@ export function HotelForm() {
 
   if (state.step === "summary") {
     return (
-      <div className="space-y-6 rounded-lg border border-gray-200 bg-white p-6">
+      <div className="space-y-6 rounded-lg border border-hairline-strong bg-canvas p-6">
         <div>
-          <h3 className="mb-4 text-lg font-semibold text-gray-900">
+          <h3 className="mb-4 text-lg font-semibold text-ink">
             검색 결과
           </h3>
-          <div className="space-y-2 text-gray-700">
+          <div className="space-y-2 text-body">
             <p>
               <strong>지역:</strong> {state.location}
             </p>
@@ -89,7 +89,7 @@ export function HotelForm() {
         </div>
 
         {state.urlError && (
-          <div className="rounded-lg bg-red-50 p-4 text-sm text-red-800">
+          <div className="rounded-lg bg-critical-surface border border-critical-border p-4 text-sm text-critical-text">
             {state.urlError}
           </div>
         )}
@@ -103,13 +103,13 @@ export function HotelForm() {
                 urlError: null,
               }))
             }
-            className="flex-1 rounded-lg border border-gray-300 py-2 font-medium text-gray-900 hover:bg-gray-50"
+            className="flex-1 rounded-lg border border-hairline-strong py-2 font-medium text-ink hover:bg-surface-container"
           >
             수정하기
           </button>
           <button
             onClick={handleHotelsClick}
-            className="flex-1 rounded-lg bg-blue-600 py-2 font-medium text-white hover:bg-blue-700"
+            className="flex-1 rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover"
           >
             숙소 보러 가기
           </button>
@@ -119,9 +119,9 @@ export function HotelForm() {
   }
 
   return (
-    <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-6">
+    <div className="space-y-4 rounded-lg border border-hairline-strong bg-canvas p-6">
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           지역
         </label>
         <input
@@ -131,12 +131,12 @@ export function HotelForm() {
             setState((prev) => ({ ...prev, location: e.target.value }))
           }
           placeholder="도시 또는 지역 입력"
-          className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-blue-500"
+          className="w-full rounded-lg border border-hairline-strong px-3 py-2 focus:border-focus-ring"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           체크인
         </label>
         <input
@@ -147,17 +147,17 @@ export function HotelForm() {
           }
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.checkIn
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-blue-500"
+              ? "border-critical-text focus:border-critical-text"
+              : "border-hairline-strong focus:border-focus-ring"
           }`}
         />
         {state.errors.checkIn && (
-          <p className="mt-1 text-sm text-red-600">{state.errors.checkIn}</p>
+          <p className="mt-1 text-sm text-critical-text">{state.errors.checkIn}</p>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           체크아웃
         </label>
         <input
@@ -168,17 +168,17 @@ export function HotelForm() {
           }
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.checkOut
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-blue-500"
+              ? "border-critical-text focus:border-critical-text"
+              : "border-hairline-strong focus:border-focus-ring"
           }`}
         />
         {state.errors.checkOut && (
-          <p className="mt-1 text-sm text-red-600">{state.errors.checkOut}</p>
+          <p className="mt-1 text-sm text-critical-text">{state.errors.checkOut}</p>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           인원
         </label>
         <select
@@ -186,7 +186,7 @@ export function HotelForm() {
           onChange={(e) =>
             setState((prev) => ({ ...prev, guests: parseInt(e.target.value) }))
           }
-          className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-blue-500"
+          className="w-full rounded-lg border border-hairline-strong px-3 py-2 focus:border-focus-ring"
         >
           {[1, 2, 3, 4, 5, 6].map((n) => (
             <option key={n} value={n}>
@@ -198,7 +198,7 @@ export function HotelForm() {
 
       <button
         onClick={handleSearch}
-        className="w-full rounded-lg bg-blue-600 py-2 font-medium text-white hover:bg-blue-700"
+        className="w-full rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover"
       >
         검색하기
       </button>

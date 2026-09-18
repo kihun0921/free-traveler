@@ -149,7 +149,7 @@ const DOMESTIC_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/서울특별시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Gyeongbokgung Palace, Seoul, South Korea.jpg"),
+      url: commonsFilePath("Gyeongbokgung.jpg"),
       alt: "서울 경복궁의 전통 궁궐 전경",
     },
   },
@@ -283,7 +283,7 @@ const DOMESTIC_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/경주시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Bulguksa temple.jpg"),
+      url: commonsFilePath("Bulguksa.jpg"),
       alt: "경주 불국사의 석조 계단과 전각",
     },
   },
@@ -327,7 +327,7 @@ const DOMESTIC_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/전주시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Jeonju Hanok Village.jpg"),
+      url: "/destinations/jeonju.webp",
       alt: "기와지붕이 이어진 전주한옥마을 전경",
     },
   },
@@ -371,7 +371,7 @@ const DOMESTIC_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/속초시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Seoraksan National Park.jpg"),
+      url: commonsFilePath("Seoraksan.jpg"),
       alt: "설악산국립공원의 가을 단풍과 봉우리",
     },
   },
@@ -596,8 +596,8 @@ const OVERSEAS_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/도쿄도",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Senso-ji Temple.jpg"),
-      alt: "도쿄 아사쿠사 센소지의 붉은 문",
+      url: commonsFilePath("Shibuya Crossing.jpg"),
+      alt: "도쿄 시부야의 유명한 횡단보도",
     },
   },
   {
@@ -684,7 +684,7 @@ const OVERSEAS_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/교토시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Fushimi Inari torii gates.jpg"),
+      url: commonsFilePath("Kyoto.jpg"),
       alt: "교토 후시미이나리 신사의 붉은 도리이 터널",
     },
   },
@@ -729,7 +729,7 @@ const OVERSEAS_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/베이징시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Forbidden City Beijing.jpg"),
+      url: commonsFilePath("Forbidden City.jpg"),
       alt: "베이징 자금성의 궁궐 지붕과 마당",
     },
   },
@@ -817,7 +817,7 @@ const OVERSEAS_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/타이베이시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Taipei 101.jpg"),
+      url: commonsFilePath("Taipei101.jpg"),
       alt: "타이베이의 랜드마크 타이베이101 빌딩",
     },
   },
@@ -866,7 +866,7 @@ const OVERSEAS_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/가오슝시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Lotus Pond Kaohsiung.jpg"),
+      url: commonsFilePath("Lotus Pond.jpg"),
       alt: "가오슝 롄츠탄 호수와 용호탑",
     },
   },
@@ -956,7 +956,7 @@ const OVERSEAS_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/다낭시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("My Khe Beach Danang.jpg"),
+      url: commonsFilePath("My Khe Beach.jpg"),
       alt: "다낭 미케 해변의 백사장",
     },
   },
@@ -1000,7 +1000,7 @@ const OVERSEAS_DESTINATIONS: Destination[] = [
     sourceUrl: "https://ko.wikipedia.org/wiki/호찌민시",
     lastVerifiedAt: "2026-09-01",
     image: {
-      url: commonsFilePath("Notre-Dame Cathedral Basilica of Saigon.jpg"),
+      url: commonsFilePath("Notre-Dame Cathedral Saigon.jpg"),
       alt: "호치민 노트르담 성당의 붉은 벽돌 외관",
     },
   },

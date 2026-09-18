@@ -51,26 +51,26 @@ export function SafetyDrawer({
 
       {/* Drawer Panel */}
       <div
-        className="fixed inset-y-0 right-0 z-50 w-full max-w-md overflow-y-auto bg-white shadow-lg sm:rounded-l-2xl"
+        className="fixed inset-y-0 right-0 z-50 w-full max-w-md overflow-y-auto bg-canvas shadow-lg sm:rounded-l-2xl"
         role="dialog"
         aria-modal="true"
         aria-labelledby="safety-title"
       >
         {/* Header */}
-        <div className="sticky top-0 border-b border-gray-200 bg-white p-6">
+        <div className="sticky top-0 border-b border-hairline bg-canvas p-6">
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <h2
                 id="safety-title"
-                className="text-2xl font-bold text-gray-900"
+                className="text-2xl font-bold text-ink"
               >
                 {safetyData.country}
               </h2>
-              <p className="mt-1 text-sm text-gray-600">안전정보</p>
+              <p className="mt-1 text-sm text-body">안전정보</p>
             </div>
             <button
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-muted hover:text-ink"
               aria-label="Close drawer"
             >
               <svg
@@ -93,11 +93,11 @@ export function SafetyDrawer({
         <div className="p-6">
           {/* Stale Warning (if 7+ days) */}
           {isStale && (
-            <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-amber-900">
+            <div className="mb-6 rounded-lg border border-caution-border bg-caution-surface p-4">
+              <p className="text-sm font-semibold text-caution-text">
                 ⚠️ 재확인 필요
               </p>
-              <p className="mt-1 text-sm text-amber-800">
+              <p className="mt-1 text-sm text-caution-text">
                 마지막 업데이트:{" "}
                 {new Date(safetyData.lastVerifiedAt).toLocaleDateString(
                   "ko-KR"
@@ -109,8 +109,8 @@ export function SafetyDrawer({
           {/* Critical Alert (if applicable) */}
           {(safetyData.scopeType === "advisory" ||
             safetyData.scopeType === "caution") && (
-            <div className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4">
-              <p className="text-sm font-semibold text-red-900">
+            <div className="mb-6 rounded-lg border border-critical-border bg-critical-surface p-4">
+              <p className="text-sm font-semibold text-critical-text">
                 🚨 {safetyData.scopeText}
               </p>
             </div>
@@ -118,10 +118,10 @@ export function SafetyDrawer({
 
           {/* Scope Information */}
           <div className="mb-6">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
               범위
             </p>
-            <p className="mt-2 text-sm text-gray-900">
+            <p className="mt-2 text-sm text-ink">
               {safetyData.scopeType === "general"
                 ? "전국 안전 정보"
                 : safetyData.scopeType === "caution"
@@ -132,19 +132,19 @@ export function SafetyDrawer({
 
           {/* 8 Required Categories */}
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
               안전정보 8개 분류
             </p>
             {safetyData.categories.map(
               (cat: { category: string; description: string }) => (
                 <div
                   key={cat.category}
-                  className="border-l-4 border-blue-200 pl-4"
+                  className="border-l-4 border-hairline-strong pl-4"
                 >
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-semibold text-ink">
                     {categoryLabels[cat.category]}
                   </h3>
-                  <p className="mt-1 text-sm text-gray-700">
+                  <p className="mt-1 text-sm text-ink">
                     {cat.description}
                   </p>
                 </div>
@@ -153,26 +153,26 @@ export function SafetyDrawer({
           </div>
 
           {/* Emergency Contacts */}
-          <div className="mt-8 border-t border-gray-200 pt-6">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+          <div className="mt-8 border-t border-hairline pt-6">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
               긴급연락처
             </p>
             <div className="mt-4 space-y-3">
               <div>
-                <p className="text-xs text-gray-600">경찰</p>
-                <p className="font-mono text-lg font-semibold text-gray-900">
+                <p className="text-xs text-body">경찰</p>
+                <p className="font-mono text-lg font-semibold text-ink">
                   {safetyData.emergencyContacts.police}
                 </p>
               </div>
               <div>
-                <p className="text-xs text-gray-600">구급차</p>
-                <p className="font-mono text-lg font-semibold text-gray-900">
+                <p className="text-xs text-body">구급차</p>
+                <p className="font-mono text-lg font-semibold text-ink">
                   {safetyData.emergencyContacts.ambulance}
                 </p>
               </div>
               <div>
-                <p className="text-xs text-gray-600">한국 영사콜센터</p>
-                <p className="font-mono text-lg font-semibold text-gray-900">
+                <p className="text-xs text-body">한국 영사콜센터</p>
+                <p className="font-mono text-lg font-semibold text-ink">
                   {safetyData.emergencyContacts.koreaEmbassy}
                 </p>
               </div>
@@ -180,11 +180,11 @@ export function SafetyDrawer({
           </div>
 
           {/* Source and Ministry Link */}
-          <div className="mt-8 border-t border-gray-200 pt-6">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+          <div className="mt-8 border-t border-hairline pt-6">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
               정보 출처
             </p>
-            <p className="mt-2 text-sm text-gray-700">
+            <p className="mt-2 text-sm text-ink">
               최종 확인:{" "}
               {new Date(safetyData.lastVerifiedAt).toLocaleDateString(
                 "ko-KR"
@@ -195,7 +195,7 @@ export function SafetyDrawer({
                 href={safetyData.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block text-sm font-semibold text-blue-600 hover:text-blue-700 underline"
+                className="mt-4 inline-block text-sm font-semibold text-primary hover:text-primary underline"
               >
                 자세히 보기 →
               </a>
@@ -204,15 +204,15 @@ export function SafetyDrawer({
               href="https://www.mofa.go.kr/www/contents/en/i_11193.do"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 ml-4 inline-block text-sm font-semibold text-blue-600 hover:text-blue-700 underline"
+              className="mt-4 ml-4 inline-block text-sm font-semibold text-primary hover:text-primary underline"
             >
               외교부 해외안전여행 →
             </a>
           </div>
 
           {/* Disclaimer */}
-          <div className="mt-8 rounded-lg bg-gray-50 p-4">
-            <p className="text-xs text-gray-600">
+          <div className="mt-8 rounded-lg bg-surface-soft p-4">
+            <p className="text-xs text-body">
               ⓘ 이 안전정보는 일반적인 참고 자료이며, 공식 정보를 대체할 수
               없습니다. 여행 전 최신 정보를 반드시 확인하세요.
             </p>

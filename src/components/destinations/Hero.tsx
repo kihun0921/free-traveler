@@ -83,42 +83,44 @@ export function Hero() {
     ];
   };
 
+  const hasActiveFilter = Boolean(filters.country || filters.region || filters.search);
+
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-6 py-12 lg:py-20">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-surface-soft rounded-xl px-base py-lg lg:px-xl lg:py-xl">
+      <div className="max-w-content-desktop mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-lg">
+          <h1 className="text-display-mobile lg:text-display text-ink mb-sm">
             여행지를 찾아보세요
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-body-lg text-body">
             50개 국가, 100개 이상의 여행지에서 당신의 다음 여행을 발견하세요
           </p>
         </div>
 
         {/* Search Box */}
-        <div className="bg-white rounded-full shadow-lg p-4 mb-8 flex flex-col lg:flex-row gap-2">
+        <div className="bg-canvas rounded-full border border-hairline-strong h-14 px-base mb-base flex items-center gap-sm max-w-2xl mx-auto focus-within:border-[1.5px] focus-within:border-focus-ring">
           <input
             type="text"
             value={search}
             onChange={(e) => handleFilterChange("search", e.target.value)}
             placeholder="여행지명, 국가로 검색..."
-            className="flex-1 px-4 py-2 outline-none text-gray-900 placeholder-gray-500"
+            className="flex-1 h-full outline-none text-ink placeholder-muted bg-transparent"
           />
-          <button className="px-6 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap">
+          <span className="text-primary text-label-md font-semibold whitespace-nowrap">
             검색
-          </button>
+          </span>
         </div>
 
         {/* Filters */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-sm mb-base max-w-2xl mx-auto">
           <select
             value={filters.country || ""}
             onChange={(e) => {
               handleFilterChange("country", e.target.value);
               handleFilterChange("region", "");
             }}
-            className="px-3 py-2 border border-gray-300 rounded-lg text-sm outline-none"
+            className="h-12 px-md border border-hairline-strong rounded text-body-sm text-ink outline-none focus:border-[1.5px] focus:border-focus-ring"
           >
             <option value="">국가</option>
             {[
@@ -134,7 +136,7 @@ export function Hero() {
             value={filters.region || ""}
             onChange={(e) => handleFilterChange("region", e.target.value)}
             disabled={!filters.country}
-            className="px-3 py-2 border border-gray-300 rounded-lg text-sm outline-none disabled:bg-gray-100"
+            className="h-12 px-md border border-hairline-strong rounded text-body-sm text-ink outline-none disabled:bg-surface-container disabled:text-muted focus:border-[1.5px] focus:border-focus-ring"
           >
             <option value="">지역</option>
             {getRegions().map((region) => (
@@ -146,50 +148,24 @@ export function Hero() {
 
           <button
             onClick={handleReset}
-            className="px-3 py-2 border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors col-span-2 lg:col-span-2"
+            className="h-12 px-md border border-hairline-strong rounded text-label-md text-ink hover:bg-surface-container transition-colors col-span-2 lg:col-span-2"
           >
             초기화
           </button>
         </div>
 
-        {/* Results */}
-        {showEmpty ? (
-          <div className="bg-white rounded-xl shadow-md p-8 text-center">
-            <p className="text-lg text-gray-600 mb-4">
-              검색 조건에 맞는 여행지가 없습니다.
-            </p>
-            <p className="text-gray-500 mb-6">필터를 완화하거나 다른 키워드로 시도해보세요.</p>
-            <button
-              onClick={handleReset}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              조건 초기화하기
-            </button>
-          </div>
-        ) : (
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <p className="text-gray-600 font-semibold mb-4">
-              검색 결과: {results.length}개
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-96 overflow-y-auto">
-              {results.slice(0, 12).map((destination) => (
-                <div
-                  key={destination.id}
-                  className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow cursor-pointer"
-                >
-                  <h3 className="font-semibold text-gray-900">
-                    {destination.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {destination.country}
-                    {destination.region && ` · ${destination.region}`}
-                  </p>
-                  <p className="text-xs text-gray-500 mt-2 line-clamp-2">
-                    {destination.summary}
-                  </p>
-                </div>
-              ))}
-            </div>
+        {/* Result count (filters applied only) */}
+        {hasActiveFilter && (
+          <div className="text-center">
+            {showEmpty ? (
+              <p className="text-body-md text-muted">
+                검색 조건에 맞는 여행지가 없습니다. 필터를 완화하거나 다른 키워드로 시도해보세요.
+              </p>
+            ) : (
+              <p className="text-body-md text-body">
+                총 {results.length}건의 여행지를 찾았습니다.
+              </p>
+            )}
           </div>
         )}
       </div>

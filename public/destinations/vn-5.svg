@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#FFA502"/>
+  <text x="200" y="120" font-size="48" font-weight="bold" fill="white" text-anchor="middle">HCM</text>
+  <text x="200" y="180" font-size="32" fill="rgba(255,255,255,0.8)" text-anchor="middle">VN</text>
+  <text x="200" y="250" font-size="16" fill="rgba(255,255,255,0.6)" text-anchor="middle">Free Traveler</text>
+</svg>

@@ -230,11 +230,11 @@ export function Filter({
   })();
 
   return (
-    <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-6">
+    <div className="space-y-4 rounded-lg border border-hairline-strong bg-canvas p-6">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-gray-900">필터</h3>
-        <p className="text-sm text-gray-600">
-          총 <span className="font-semibold text-gray-900">{filteredCount}</span>
+        <h3 className="text-lg font-semibold text-ink">필터</h3>
+        <p className="text-sm text-body">
+          총 <span className="font-semibold text-ink">{filteredCount}</span>
           건
         </p>
       </div>
@@ -242,13 +242,13 @@ export function Filter({
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               국가
             </label>
             <select
               value={selectedCountry}
               onChange={(e) => handleCountryChange(e.target.value)}
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+              className="w-full rounded-lg border border-hairline-strong px-3 py-2 text-sm"
             >
               <option value="">전체</option>
               {COUNTRIES.map((country) => (
@@ -260,14 +260,14 @@ export function Filter({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               지역
             </label>
             <select
               value={selectedRegion}
               onChange={(e) => setSelectedRegion(e.target.value)}
               disabled={!selectedCountry}
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm disabled:bg-gray-50 disabled:text-gray-500"
+              className="w-full rounded-lg border border-hairline-strong px-3 py-2 text-sm disabled:bg-surface-container disabled:text-muted"
             >
               <option value="">전체</option>
               {availableRegions.map((region) => (
@@ -279,7 +279,7 @@ export function Filter({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               여행 시작
             </label>
             <input
@@ -291,12 +291,12 @@ export function Filter({
                   start: e.target.value,
                 })
               }
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+              className="w-full rounded-lg border border-hairline-strong px-3 py-2 text-sm"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               여행 종료
             </label>
             <input
@@ -308,14 +308,14 @@ export function Filter({
                   end: e.target.value,
                 })
               }
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+              className="w-full rounded-lg border border-hairline-strong px-3 py-2 text-sm"
             />
           </div>
         </div>
 
         <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               연령대
             </label>
             <div className="space-y-2">
@@ -333,16 +333,16 @@ export function Filter({
                         );
                       }
                     }}
-                    className="mr-2 rounded border-gray-300"
+                    className="mr-2 rounded border-hairline-strong"
                   />
-                  <span className="text-sm text-gray-700">{age}</span>
+                  <span className="text-sm text-body">{age}</span>
                 </label>
               ))}
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               성별
             </label>
             <div className="space-y-2">
@@ -360,16 +360,16 @@ export function Filter({
                         );
                       }
                     }}
-                    className="mr-2 rounded border-gray-300"
+                    className="mr-2 rounded border-hairline-strong"
                   />
-                  <span className="text-sm text-gray-700">{gender}</span>
+                  <span className="text-sm text-body">{gender}</span>
                 </label>
               ))}
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               여행스타일
             </label>
             <div className="space-y-2">
@@ -390,16 +390,16 @@ export function Filter({
                         );
                       }
                     }}
-                    className="mr-2 rounded border-gray-300"
+                    className="mr-2 rounded border-hairline-strong"
                   />
-                  <span className="text-sm text-gray-700">{style}</span>
+                  <span className="text-sm text-body">{style}</span>
                 </label>
               ))}
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-body mb-2">
               모집상태
             </label>
             <div className="space-y-2">
@@ -417,9 +417,9 @@ export function Filter({
                         );
                       }
                     }}
-                    className="mr-2 rounded border-gray-300"
+                    className="mr-2 rounded border-hairline-strong"
                   />
-                  <span className="text-sm text-gray-700">
+                  <span className="text-sm text-body">
                     {status === "모집중" ? "OPEN" : "CLOSED"}
                   </span>
                 </label>
@@ -430,7 +430,7 @@ export function Filter({
 
         <button
           onClick={handleFilterApplyClick}
-          className="mt-4 w-full rounded-lg bg-blue-600 py-2 font-medium text-white hover:bg-blue-700"
+          className="mt-4 w-full rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover"
         >
           필터 적용
         </button>

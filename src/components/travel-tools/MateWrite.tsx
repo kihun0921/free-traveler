@@ -71,11 +71,11 @@ export function MateWrite() {
   };
 
   return (
-    <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-6">
-      <h3 className="text-lg font-semibold text-gray-900">동행 찾기</h3>
+    <div className="space-y-4 rounded-lg border border-hairline-strong bg-canvas p-6">
+      <h3 className="text-lg font-semibold text-ink">동행 찾기</h3>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           제목
         </label>
         <input
@@ -86,16 +86,16 @@ export function MateWrite() {
           }
           placeholder="예: 7월 일본 오사카 가실 분 찾습니다"
           className={`w-full rounded-lg border px-3 py-2 ${
-            state.errors.title ? "border-red-500" : "border-gray-300"
+            state.errors.title ? "border-critical-text" : "border-hairline-strong"
           }`}
         />
         {state.errors.title && (
-          <p className="mt-1 text-sm text-red-600">{state.errors.title}</p>
+          <p className="mt-1 text-sm text-critical-text">{state.errors.title}</p>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           여행지
         </label>
         <input
@@ -106,18 +106,18 @@ export function MateWrite() {
           }
           placeholder="예: 일본 오사카"
           className={`w-full rounded-lg border px-3 py-2 ${
-            state.errors.destination ? "border-red-500" : "border-gray-300"
+            state.errors.destination ? "border-critical-text" : "border-hairline-strong"
           }`}
         />
         {state.errors.destination && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-1 text-sm text-critical-text">
             {state.errors.destination}
           </p>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           여행 기간
         </label>
         <input
@@ -128,18 +128,18 @@ export function MateWrite() {
           }
           placeholder="예: 2026년 7월 5일 ~ 12일 (7박 8일)"
           className={`w-full rounded-lg border px-3 py-2 ${
-            state.errors.travelDates ? "border-red-500" : "border-gray-300"
+            state.errors.travelDates ? "border-critical-text" : "border-hairline-strong"
           }`}
         />
         {state.errors.travelDates && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-1 text-sm text-critical-text">
             {state.errors.travelDates}
           </p>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-900 mb-2">
+        <label className="block text-sm font-medium text-ink mb-2">
           상세 설명
         </label>
         <textarea
@@ -148,17 +148,17 @@ export function MateWrite() {
           placeholder="여행 계획, 관심사, 원하는 동행의 조건을 자유롭게 작성해주세요"
           rows={6}
           className={`w-full rounded-lg border px-3 py-2 ${
-            state.errors.description ? "border-red-500" : "border-gray-300"
+            state.errors.description ? "border-critical-text" : "border-hairline-strong"
           }`}
         />
         {state.contactWarning && (
-          <p className="mt-2 text-sm text-amber-600">
+          <p className="mt-2 text-sm text-caution-text">
             ⚠️ 개인 연락처(이메일, 전화번호) 노출에 주의하세요. 안전을 위해
             플랫폼 내 메시지 기능을 사용하세요.
           </p>
         )}
         {state.errors.description && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-1 text-sm text-critical-text">
             {state.errors.description}
           </p>
         )}
@@ -166,7 +166,7 @@ export function MateWrite() {
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-900 mb-2">
+          <label className="block text-sm font-medium text-ink mb-2">
             예산 (선택사항)
           </label>
           <input
@@ -176,11 +176,11 @@ export function MateWrite() {
               setState((prev) => ({ ...prev, budget: e.target.value }))
             }
             placeholder="예: 200~300만원"
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="w-full rounded-lg border border-hairline-strong px-3 py-2"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-900 mb-2">
+          <label className="block text-sm font-medium text-ink mb-2">
             모집 인원
           </label>
           <select
@@ -188,7 +188,7 @@ export function MateWrite() {
             onChange={(e) =>
               setState((prev) => ({ ...prev, maxPeople: parseInt(e.target.value) }))
             }
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="w-full rounded-lg border border-hairline-strong px-3 py-2"
           >
             {[1, 2, 3, 4, 5].map((n) => (
               <option key={n} value={n}>
@@ -201,7 +201,7 @@ export function MateWrite() {
 
       <button
         onClick={handleSubmit}
-        className="w-full rounded-lg bg-blue-600 py-2 font-medium text-white hover:bg-blue-700"
+        className="w-full rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover"
       >
         모집 글 등록
       </button>

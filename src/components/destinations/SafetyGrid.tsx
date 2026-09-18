@@ -19,27 +19,27 @@ export function SafetyGrid() {
               setSelectedCountry(safety.countryCode);
               setDrawerOpen(true);
             }}
-            className="group rounded-lg border border-gray-200 p-4 text-left transition-colors hover:border-blue-300 hover:bg-blue-50"
+            className="group rounded-lg border border-hairline p-4 text-left transition-colors hover:border-hairline-strong hover:bg-surface-soft"
           >
-            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
+            <h3 className="font-semibold text-ink group-hover:text-primary">
               {safety.country}
             </h3>
-            <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+            <p className="mt-2 text-sm text-body line-clamp-2">
               {safety.scopeText}
             </p>
             <div className="mt-3 flex gap-2">
               {safety.scopeType === "advisory" && (
-                <span className="inline-flex rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-900">
+                <span className="inline-flex rounded-full bg-critical-surface px-2 py-1 text-xs font-semibold text-critical-text">
                   출국권고
                 </span>
               )}
               {safety.scopeType === "caution" && (
-                <span className="inline-flex rounded-full bg-amber-50 px-2 py-1 text-xs font-semibold text-amber-900">
+                <span className="inline-flex rounded-full bg-caution-surface px-2 py-1 text-xs font-semibold text-caution-text">
                   주의
                 </span>
               )}
               {safety.scopeType === "general" && (
-                <span className="inline-flex rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-900">
+                <span className="inline-flex rounded-full bg-success-surface px-2 py-1 text-xs font-semibold text-success-text">
                   안전
                 </span>
               )}

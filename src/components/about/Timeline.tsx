@@ -46,23 +46,23 @@ const TIMELINE_ENTRIES: TimelineEntry[] = [
 export function Timeline() {
   return (
     <div className="space-y-8">
-      <h2 className="text-2xl font-bold text-gray-900">여행 경력</h2>
+      <h2 className="text-2xl font-bold text-ink">여행 경력</h2>
       <div className="space-y-8">
         {TIMELINE_ENTRIES.map((entry, index) => (
           <div key={entry.year} className="flex gap-6">
             <div className="flex flex-col items-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-semibold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-on-primary font-semibold">
                 {entry.year}
               </div>
               {index !== TIMELINE_ENTRIES.length - 1 && (
-                <div className="mt-2 h-16 w-0.5 bg-gray-300" />
+                <div className="mt-2 h-16 w-0.5 bg-hairline-strong" />
               )}
             </div>
             <div className="pb-8">
-              <h3 className="mb-2 text-lg font-semibold text-gray-900">
+              <h3 className="mb-2 text-lg font-semibold text-ink">
                 {entry.title}
               </h3>
-              <p className="text-gray-700">{entry.description}</p>
+              <p className="text-body">{entry.description}</p>
             </div>
           </div>
         ))}

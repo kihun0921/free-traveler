@@ -81,12 +81,12 @@ export function FlightForm() {
 
   if (state.step === "summary") {
     return (
-      <div className="space-y-6 rounded-lg border border-gray-200 bg-white p-6">
+      <div className="space-y-6 rounded-lg border border-hairline-strong bg-canvas p-6">
         <div>
-          <h3 className="mb-4 text-lg font-semibold text-gray-900">
+          <h3 className="mb-4 text-lg font-semibold text-ink">
             검색 결과
           </h3>
-          <div className="space-y-2 text-gray-700">
+          <div className="space-y-2 text-body">
             <p>
               <strong>출발지:</strong> {selectedCountry?.name} · {state.region}
             </p>
@@ -99,18 +99,18 @@ export function FlightForm() {
           </div>
         </div>
 
-        <div className="space-y-3 rounded-lg bg-amber-50 p-4">
-          <p className="text-sm font-medium text-amber-900">
+        <div className="space-y-3 rounded-lg bg-caution-surface border border-caution-border p-4">
+          <p className="text-sm font-medium text-caution-text">
             ⚠️ 안전 정보 고지
           </p>
-          <p className="text-xs text-amber-800">
+          <p className="text-xs text-caution-text">
             여행 시 해당 국가의 최신 안전 정보를 반드시 확인하세요. 외교부 여행
             주의보를 참고하여 안전한 여행을 계획해주세요.
           </p>
         </div>
 
         {state.urlError && (
-          <div className="rounded-lg bg-red-50 p-4 text-sm text-red-800">
+          <div className="rounded-lg bg-critical-surface border border-critical-border p-4 text-sm text-critical-text">
             {state.urlError}
           </div>
         )}
@@ -124,13 +124,13 @@ export function FlightForm() {
                 urlError: null,
               }))
             }
-            className="flex-1 rounded-lg border border-gray-300 py-2 font-medium text-gray-900 hover:bg-gray-50"
+            className="flex-1 rounded-lg border border-hairline-strong py-2 font-medium text-ink hover:bg-surface-container"
           >
             수정하기
           </button>
           <button
             onClick={handleFlightsClick}
-            className="flex-1 rounded-lg bg-blue-600 py-2 font-medium text-white hover:bg-blue-700"
+            className="flex-1 rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover"
           >
             항공편 보러 가기
           </button>
@@ -140,9 +140,9 @@ export function FlightForm() {
   }
 
   return (
-    <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-6">
+    <div className="space-y-4 rounded-lg border border-hairline-strong bg-canvas p-6">
       <div>
-        <label htmlFor="flight-country" className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="flight-country" className="block text-sm font-medium text-ink mb-2">
           출발 국가
         </label>
         <select
@@ -159,8 +159,8 @@ export function FlightForm() {
           aria-describedby={state.errors.country ? "flight-country-error" : undefined}
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.country
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-blue-500"
+              ? "border-critical-text focus:border-critical-text"
+              : "border-hairline-strong focus:border-focus-ring"
           }`}
         >
           <option value="">선택하세요</option>
@@ -171,13 +171,13 @@ export function FlightForm() {
           ))}
         </select>
         {state.errors.country && (
-          <p id="flight-country-error" className="mt-1 text-sm text-red-600">{state.errors.country}</p>
+          <p id="flight-country-error" className="mt-1 text-sm text-critical-text">{state.errors.country}</p>
         )}
       </div>
 
       {state.country && availableRegions.length > 0 && (
         <div>
-          <label htmlFor="flight-region" className="block text-sm font-medium text-gray-900 mb-2">
+          <label htmlFor="flight-region" className="block text-sm font-medium text-ink mb-2">
             지역
           </label>
           <select
@@ -186,7 +186,7 @@ export function FlightForm() {
             onChange={(e) =>
               setState((prev) => ({ ...prev, region: e.target.value }))
             }
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:ring-blue-500"
+            className="w-full rounded-lg border border-hairline-strong px-3 py-2 focus:border-focus-ring"
           >
             <option value="">선택하세요</option>
             {availableRegions.map((r) => (
@@ -199,7 +199,7 @@ export function FlightForm() {
       )}
 
       <div>
-        <label htmlFor="flight-depart" className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="flight-depart" className="block text-sm font-medium text-ink mb-2">
           출발일
         </label>
         <input
@@ -213,19 +213,19 @@ export function FlightForm() {
           aria-describedby={state.errors.departDate ? "flight-depart-error" : undefined}
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.departDate
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-blue-500"
+              ? "border-critical-text focus:border-critical-text"
+              : "border-hairline-strong focus:border-focus-ring"
           }`}
         />
         {state.errors.departDate && (
-          <p id="flight-depart-error" className="mt-1 text-sm text-red-600">
+          <p id="flight-depart-error" className="mt-1 text-sm text-critical-text">
             {state.errors.departDate}
           </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="flight-return" className="block text-sm font-medium text-gray-900 mb-2">
+        <label htmlFor="flight-return" className="block text-sm font-medium text-ink mb-2">
           귀국일
         </label>
         <input
@@ -239,12 +239,12 @@ export function FlightForm() {
           aria-describedby={state.errors.returnDate ? "flight-return-error" : undefined}
           className={`w-full rounded-lg border px-3 py-2 ${
             state.errors.returnDate
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-blue-500"
+              ? "border-critical-text focus:border-critical-text"
+              : "border-hairline-strong focus:border-focus-ring"
           }`}
         />
         {state.errors.returnDate && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-1 text-sm text-critical-text">
             {state.errors.returnDate}
           </p>
         )}
@@ -252,7 +252,7 @@ export function FlightForm() {
 
       <button
         onClick={handleSearch}
-        className="w-full rounded-lg bg-blue-600 py-2 font-medium text-white hover:bg-blue-700"
+        className="w-full rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover"
       >
         검색하기
       </button>

@@ -26,20 +26,24 @@ export function ThemeChips() {
 
   return (
     <div className="flex flex-wrap gap-3">
-      {THEMES.map((theme) => (
-        <button
-          key={theme.id}
-          onClick={() => toggleTheme(theme.id)}
-          className={`inline-flex items-center gap-2 rounded-full px-4 py-2 font-semibold transition-colors ${
-            selectedThemes.has(theme.id)
-              ? "bg-blue-600 text-white"
-              : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-          }`}
-        >
-          <span>{theme.icon}</span>
-          {theme.label}
-        </button>
-      ))}
+      {THEMES.map((theme) => {
+        const isActive = selectedThemes.has(theme.id);
+        return (
+          <button
+            key={theme.id}
+            onClick={() => toggleTheme(theme.id)}
+            aria-pressed={isActive}
+            className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-ink transition-colors ${
+              isActive
+                ? "border-[1.5px] border-ink bg-canvas"
+                : "border border-transparent bg-surface-container hover:bg-surface-container-high"
+            }`}
+          >
+            <span aria-hidden="true">{theme.icon}</span>
+            {theme.label}
+          </button>
+        );
+      })}
     </div>
   );
 }
