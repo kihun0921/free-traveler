@@ -11,7 +11,7 @@ page_entry: -
 priority: P1
 depends_on: []
 requirements: []
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR004-INTRO — Intro+작성 CTA(Section1)

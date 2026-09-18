@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-MATE-POSTS]
 requirements: [REQ-FUNC-030, REQ-NF-004]
-status: TODO
+status: DONE
 ---
 
 # COMP-SCR004-FILTER — Filter+결과 요약(Section2)

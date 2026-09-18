@@ -11,7 +11,7 @@ page_entry: -
 priority: P0
 depends_on: [API-MATE-POSTS]
 requirements: [REQ-FUNC-034, REQ-FUNC-035, REQ-FUNC-036, REQ-NF-005]
-status: TODO
+status: DONE
 ---
 
 # API-MATE-APPLICATIONS — 참가 요청 CRUD API
