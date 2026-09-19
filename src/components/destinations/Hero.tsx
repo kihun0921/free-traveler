@@ -3,6 +3,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { destinations, type Destination } from "@/data/destinations";
 
 interface Filters {
@@ -86,14 +87,28 @@ export function Hero() {
   const hasActiveFilter = Boolean(filters.country || filters.region || filters.search);
 
   return (
-    <section className="bg-surface-soft rounded-xl px-base py-lg lg:px-xl lg:py-xl">
-      <div className="max-w-content-desktop mx-auto w-full">
+    <section className="relative overflow-hidden rounded-xl px-base py-lg lg:px-xl lg:py-xl min-h-[280px] lg:min-h-[340px] flex flex-col justify-center">
+      <Image
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Yurts%20and%20resort%20in%20Altyn%20Arashan%2C%20Kyrgyzstan.jpg"
+        alt="키르기스스탄 알틴아라샨 계곡의 유르트와 설산 전경"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      {/* 사진 위 텍스트 가독성을 위한 음영 스크림 — 아래로 갈수록 짙어지는 그라데이션(DESIGN.md §6 scrim 토큰) */}
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10"
+        aria-hidden="true"
+      />
+
+      <div className="relative max-w-content-desktop mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-lg">
-          <h1 className="text-display-mobile lg:text-display text-ink mb-sm">
+        <div className="text-center mb-base">
+          <h1 className="text-headline-lg lg:text-display-mobile text-on-primary mb-xs drop-shadow-sm">
             여행지를 찾아보세요
           </h1>
-          <p className="text-body-lg text-body">
+          <p className="text-body-md lg:text-body-lg text-on-primary/90 drop-shadow-sm">
             50개 국가, 100개 이상의 여행지에서 당신의 다음 여행을 발견하세요
           </p>
         </div>
@@ -120,7 +135,7 @@ export function Hero() {
               handleFilterChange("country", e.target.value);
               handleFilterChange("region", "");
             }}
-            className="h-12 px-md border border-hairline-strong rounded text-body-sm text-ink outline-none focus:border-[1.5px] focus:border-focus-ring"
+            className="h-12 px-md border border-hairline-strong rounded bg-canvas text-body-sm text-ink outline-none focus:border-[1.5px] focus:border-focus-ring"
           >
             <option value="">국가</option>
             {[
@@ -136,7 +151,7 @@ export function Hero() {
             value={filters.region || ""}
             onChange={(e) => handleFilterChange("region", e.target.value)}
             disabled={!filters.country}
-            className="h-12 px-md border border-hairline-strong rounded text-body-sm text-ink outline-none disabled:bg-surface-container disabled:text-muted focus:border-[1.5px] focus:border-focus-ring"
+            className="h-12 px-md border border-hairline-strong rounded bg-canvas text-body-sm text-ink outline-none disabled:bg-surface-container disabled:text-muted focus:border-[1.5px] focus:border-focus-ring"
           >
             <option value="">지역</option>
             {getRegions().map((region) => (
@@ -148,7 +163,7 @@ export function Hero() {
 
           <button
             onClick={handleReset}
-            className="h-12 px-md border border-hairline-strong rounded text-label-md text-ink hover:bg-surface-container transition-colors col-span-2 lg:col-span-2"
+            className="h-12 px-md border border-hairline-strong rounded bg-canvas text-label-md text-ink hover:bg-surface-container transition-colors col-span-2 lg:col-span-2"
           >
             초기화
           </button>
@@ -157,15 +172,17 @@ export function Hero() {
         {/* Result count (filters applied only) */}
         {hasActiveFilter && (
           <div className="text-center">
-            {showEmpty ? (
-              <p className="text-body-md text-muted">
-                검색 조건에 맞는 여행지가 없습니다. 필터를 완화하거나 다른 키워드로 시도해보세요.
-              </p>
-            ) : (
-              <p className="text-body-md text-body">
-                총 {results.length}건의 여행지를 찾았습니다.
-              </p>
-            )}
+            <span className="inline-block rounded-full bg-canvas px-base py-xs">
+              {showEmpty ? (
+                <span className="text-body-md text-muted">
+                  검색 조건에 맞는 여행지가 없습니다. 필터를 완화하거나 다른 키워드로 시도해보세요.
+                </span>
+              ) : (
+                <span className="text-body-md text-body">
+                  총 {results.length}건의 여행지를 찾았습니다.
+                </span>
+              )}
+            </span>
           </div>
         )}
       </div>
