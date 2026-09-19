@@ -39,8 +39,13 @@ export function IntroPhilosophy() {
 
       <div className="grid gap-6 md:grid-cols-3">
         {PHILOSOPHY_CARDS.map((card) => (
-          <div key={card.title} className="rounded-lg bg-surface-soft p-6">
-            <div className="mb-4 text-4xl">{card.icon}</div>
+          <div
+            key={card.title}
+            className="rounded-md border border-hairline bg-surface-soft p-6 transition-shadow hover:shadow-card"
+          >
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-canvas text-2xl">
+              {card.icon}
+            </div>
             <h3 className="mb-3 text-lg font-semibold text-ink">
               {card.title}
             </h3>

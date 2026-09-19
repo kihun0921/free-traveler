@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { destinations } from "@/data/destinations";
 
 interface RecommendedDestination {
@@ -7,8 +8,8 @@ interface RecommendedDestination {
 }
 
 const RECOMMENDED: RecommendedDestination[] = [
-  { destinationId: "ayutthaya", reason: "고대 문명과 현대의 조화" },
-  { destinationId: "cusco", reason: "역사와 자연의 만남" },
+  { destinationId: "rome", reason: "고대 문명과 현대 도시의 조화" },
+  { destinationId: "istanbul", reason: "동양과 서양이 만나는 역사의 교차로" },
   { destinationId: "paris", reason: "문화와 예술의 중심" },
   { destinationId: "tokyo", reason: "전통과 혁신의 교차점" },
 ];
@@ -32,27 +33,37 @@ export function Recommended() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {recommendedDests.map(({ destination, reason }) => (
-          <div
+          <Link
             key={destination!.id}
-            className="overflow-hidden rounded-lg bg-canvas shadow"
+            href={`/?destination=${destination!.id}`}
+            className="group overflow-hidden rounded-md border border-hairline bg-canvas transition-shadow hover:shadow-card"
           >
-            <div className="relative h-48 w-full">
+            <div className="relative h-48 w-full overflow-hidden">
               <Image
                 src={destination!.image.url}
                 alt={destination!.image.alt}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="p-4">
-              <h3 className="mb-2 text-lg font-semibold text-ink">
+              <h3 className="mb-2 text-lg font-semibold text-ink group-hover:text-primary">
                 {destination!.name}
               </h3>
               <p className="mb-3 text-sm text-muted">{destination!.country}</p>
               <p className="text-ink">{reason}</p>
             </div>
-          </div>
+          </Link>
         ))}
+      </div>
+
+      <div className="text-center">
+        <Link
+          href="/"
+          className="inline-flex h-12 items-center justify-center rounded border border-hairline-strong px-lg text-label-md text-ink hover:bg-surface-container transition-colors"
+        >
+          다른 여행지도 둘러보기 →
+        </Link>
       </div>
     </div>
   );
