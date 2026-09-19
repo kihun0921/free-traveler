@@ -1,14 +1,45 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { Destination } from "@/data/destinations";
 import { overseasDestinations } from "@/data/destinations";
 import { DestinationDrawer } from "./DestinationDrawer";
 
 export function OverseasGrid() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [selectedDest, setSelectedDest] = useState<Destination | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  // 공유 가능한 딥링크: ?destination=tokyo 로 접속하면 해당 카드 상세가 바로 열린다.
+  useEffect(() => {
+    const destId = searchParams.get("destination");
+    if (!destId) return;
+    const match = overseasDestinations.find((d) => d.id === destId);
+    if (match) {
+      setSelectedDest(match);
+      setDrawerOpen(true);
+    }
+  }, [searchParams]);
+
+  const openDestination = (dest: Destination) => {
+    setSelectedDest(dest);
+    setDrawerOpen(true);
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("destination", dest.id);
+    router.replace(`?${params.toString()}`, { scroll: false });
+  };
+
+  const closeDrawer = () => {
+    setDrawerOpen(false);
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete("destination");
+    const query = params.toString();
+    router.replace(query ? `?${query}` : "/", { scroll: false });
+  };
 
   return (
     <>
@@ -23,10 +54,7 @@ export function OverseasGrid() {
           return (
             <button
               key={dest.id}
-              onClick={() => {
-                setSelectedDest(dest);
-                setDrawerOpen(true);
-              }}
+              onClick={() => openDestination(dest)}
               className="group rounded-md border border-hairline text-left transition-shadow hover:shadow-card"
             >
               <div className="relative overflow-hidden rounded-t-md bg-surface-container">
@@ -69,7 +97,7 @@ export function OverseasGrid() {
       <DestinationDrawer
         destination={selectedDest}
         isOpen={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
+        onClose={closeDrawer}
       />
     </>
   );

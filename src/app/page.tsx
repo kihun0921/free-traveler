@@ -29,7 +29,9 @@ export default function Home() {
           <h2 className="text-headline-lg text-ink mb-lg">
             국내 인기 여행지
           </h2>
-          <DomesticGrid />
+          <Suspense fallback={null}>
+            <DomesticGrid />
+          </Suspense>
         </div>
       </section>
 
@@ -39,7 +41,9 @@ export default function Home() {
           <h2 className="text-headline-lg text-ink mb-lg">
             해외 인기 여행지
           </h2>
-          <OverseasGrid />
+          <Suspense fallback={null}>
+            <OverseasGrid />
+          </Suspense>
         </div>
       </section>
 

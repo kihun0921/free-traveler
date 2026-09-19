@@ -106,12 +106,18 @@ export function SafetyDrawer({
             </div>
           )}
 
-          {/* Critical Alert (if applicable) */}
-          {(safetyData.scopeType === "advisory" ||
-            safetyData.scopeType === "caution") && (
+          {/* Advisory Alert (2/3단계에 따라 caution/critical 색상 분리) */}
+          {safetyData.scopeType === "advisory" && (
             <div className="mb-6 rounded-lg border border-critical-border bg-critical-surface p-4">
               <p className="text-sm font-semibold text-critical-text">
-                🚨 {safetyData.scopeText}
+                🚨 3단계 철수권고 · {safetyData.scopeText}
+              </p>
+            </div>
+          )}
+          {safetyData.scopeType === "caution" && (
+            <div className="mb-6 rounded-lg border border-caution-border bg-caution-surface p-4">
+              <p className="text-sm font-semibold text-caution-text">
+                ⚠️ 2단계 여행자제 · {safetyData.scopeText}
               </p>
             </div>
           )}
@@ -123,10 +129,10 @@ export function SafetyDrawer({
             </p>
             <p className="mt-2 text-sm text-ink">
               {safetyData.scopeType === "general"
-                ? "전국 안전 정보"
+                ? "여행경보 없음 · 전국 안전 정보"
                 : safetyData.scopeType === "caution"
-                  ? "지역별 주의사항"
-                  : "출국 권고"}
+                  ? "2단계 여행자제 · 지역별 주의사항"
+                  : "3단계 철수권고 · 해당 지역 출국 권고"}
             </p>
           </div>
 

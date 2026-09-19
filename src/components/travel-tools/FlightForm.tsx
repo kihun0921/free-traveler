@@ -132,9 +132,19 @@ export function FlightForm() {
             onClick={handleFlightsClick}
             className="flex-1 rounded-lg bg-primary py-2 font-medium text-on-primary hover:bg-primary-hover"
           >
-            항공편 보러 가기
+            항공편 보러 가기 <span aria-hidden="true">↗</span>
           </button>
         </div>
+        <p className="text-center text-xs text-muted">
+          새 탭에서 열립니다. 이 화면에 입력한 조건은 그대로 남아있어요.
+        </p>
+
+        <a
+          href="/mates"
+          className="block rounded-lg border border-hairline bg-surface-soft px-4 py-3 text-center text-sm font-medium text-ink hover:bg-surface-container"
+        >
+          같이 갈 동행도 찾아볼까요? 동행 찾기로 이동 →
+        </a>
       </div>
     );
   }

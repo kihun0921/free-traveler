@@ -30,17 +30,17 @@ export function SafetyGrid() {
             <div className="mt-3 flex gap-2">
               {safety.scopeType === "advisory" && (
                 <span className="inline-flex rounded-full bg-critical-surface px-2 py-1 text-xs font-semibold text-critical-text">
-                  출국권고
+                  3단계 철수권고
                 </span>
               )}
               {safety.scopeType === "caution" && (
                 <span className="inline-flex rounded-full bg-caution-surface px-2 py-1 text-xs font-semibold text-caution-text">
-                  주의
+                  2단계 여행자제
                 </span>
               )}
               {safety.scopeType === "general" && (
                 <span className="inline-flex rounded-full bg-success-surface px-2 py-1 text-xs font-semibold text-success-text">
-                  안전
+                  여행경보 없음
                 </span>
               )}
             </div>

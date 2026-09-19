@@ -47,5 +47,6 @@ export function redirectToOutbound(url: string, destination?: string): void {
   redirectUrl.searchParams.delete("end_date");
   redirectUrl.password = "";
 
-  window.location.href = redirectUrl.toString();
+  // 새 탭에서 열어 사용자가 입력한 조건(Free Traveler 화면)을 잃지 않게 한다.
+  window.open(redirectUrl.toString(), "_blank", "noopener,noreferrer");
 }
